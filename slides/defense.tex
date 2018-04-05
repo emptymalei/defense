@@ -6,7 +6,7 @@
 %% conditions are required by law.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[10pt]{beamer}
+\documentclass[9pt]{beamer}
 \usetheme[faculty=fi]{fibeamer}
 \usepackage[utf8]{inputenc}
 \usepackage[
@@ -116,7 +116,7 @@
 
 %%%%% Neutrino Oscillations %%%%%%%%%
 
-\subsection{Neutrino Oscillations}
+\subsection{Vacuum Oscillations}
 
 
 \begin{frame}{What is Neutrino Oscillation?}
@@ -165,7 +165,7 @@
 
 %%%%%% Why Neutrinos Oscillate? %%%%%%%%%
 
-\subsection{Why Do Neutrinos Oscillate}
+% \subsubsection{Why Do Neutrinos Oscillate}
 
 % For every picture that defines or uses external nodes, you'll have to
 % apply the 'remember picture' style. To avoid some typing, we'll apply
@@ -310,10 +310,10 @@ P(\ket{\nu_{\mathrm e} }\to\ket{\nu_{\mu}})  =  \sin^2(2\theta_{\mathrm v}) \sin
 %%%%%%%%%%%%%%%%%%%% Matter Effect %%%%%%%%%%%%%%%
 
 
-\subsection{Matter Effect}
+\section{Matter Stimulated Oscillations}
 
 
-\subsubsection{Matter Interaction}
+\subsection{Matter Interactions, MSW Effect, and Solar Neutrino Problem}
 
 
 \begin{frame}{Matter Interaction}
@@ -445,7 +445,7 @@ and $e^{-}$, quarks and antiquarks.}
 
 %%%%%%%%%%%%%%%%%
 
-\subsubsection{MSW Effect}
+% \subsection{MSW Effect}
 
 \begin{frame}{MSW Effect}
 
@@ -661,11 +661,7 @@ $\big\downarrow$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%% Stimulated Effect/Multi-frequency stimulation %%%%%%%%%%%%%%%
-\subsection{Stimulated Neutrino Oscillations}
-
-
-
-
+\subsection{Stimulated Neutrino Oscillations and Rabi Oscillations}
 
 \begin{frame}{Supernova Matter Density Profile}
 
@@ -919,7 +915,7 @@ where
 -\alpha \sin(kt) &
 \omega_0
 \end{pmatrix}
-\colorbox{blue!20}{$\begin{pmatrix}
+\colorbox{blue!50}{$\begin{pmatrix}
 -\sigma_1/2 \\
 -\sigma_2/2 \\
 -\sigma_3/2
@@ -967,16 +963,8 @@ is
 
 
 \begin{align*}
-    \mathbf {H} =& \frac{1}{2}\left( - \omega_{\mathrm{m}} \colorbox{gray!50}{$+  \cos 2\theta_{\mathrm{m}}A\cos(kx) $} \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m} }  }{2}A \cos(kx)  \sigma_1\\
+    \mathbf {H} =& \frac{1}{2}\left( - \omega_{\mathrm{m}} \colorbox{gray!70}{$+  \cos 2\theta_{\mathrm{m}}A\cos(kx) $} \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m} }  }{2}A \cos(kx)  \sigma_1\\
     \to& -\frac{\omega_m}{2} \sigma_3 - \frac{A\sin 2\theta_{\mathrm m}}{2} \cos(kx)\sigma_1
-    % =&-\frac{\omega_m}{2} \sigma_3 - \frac{A\sin 2\theta_{\mathrm m}}{2} \frac{1}{2}\begin{pmatrix}
-    % 0 & e^{ikx}\\
-    % e^{-ikx} & 0
-    % \end{pmatrix}
-    % - \frac{A\sin 2\theta_{\mathrm m}}{2} \frac{1}{2}\begin{pmatrix}
-    % 0 & e^{i(-k)x} \\
-    % e^{-i(-k)x} & 0
-    % \end{pmatrix}
 \end{align*}
 
 \begin{equation*}
@@ -996,6 +984,7 @@ is
 \end{equation*}
 
 \begin{tcolorbox}
+\centering
 Two frequencies!
 \end{tcolorbox}
 
@@ -1018,14 +1007,14 @@ Two frequencies!
      \cos(k_1x)\\
     -\sin(k_1x)\\
     0
-    \end{pmatrix} + \colorbox{blue!20}{$\alpha_2\begin{pmatrix}
+    \end{pmatrix} + \colorbox{blue!50}{$\alpha_2\begin{pmatrix}
     \cos(k_2x)\\
     -\sin(k_2x)\\
     0
     \end{pmatrix}$}
 \end{equation*}
 
-Corotating frame of the second frequency,
+Co-rotating frame of the second frequency,
 
 
 
@@ -1102,6 +1091,7 @@ Matter profile
 
 
 \begin{tcolorbox}[title=Hamiltonian in Background Matter Basis]
+\vspace{-0.5em}
     \begin{equation*}
     \mathbf {H} = \frac{1}{2}\left( - \omega_{\mathrm{m}} + {\color{red}\delta \lambda(x)} \cos 2\theta_{\mathrm{m}} \right) \boldsymbol{\sigma_3} - \frac{  {\color{red}\delta \lambda(x)}  }{2} \sin \theta_{\mathrm{m}} \boldsymbol{\sigma_1}.
 \end{equation*}
@@ -1112,7 +1102,6 @@ Matter profile
 
 
 Define new basis \{$\ket{\tilde\nu_{\mathrm{L} }}$,$\ket{\tilde\nu_{\mathrm{H} }}$\} is related to background matter basis \{$\ket{\nu_{\mathrm{L} }}$,$\ket{\nu_{\mathrm{H} }}$\} through
-
 \begin{equation*}
     \begin{pmatrix}
     \ket{\nu_{\mathrm{L} }} \\
@@ -1124,9 +1113,7 @@ Define new basis \{$\ket{\tilde\nu_{\mathrm{L} }}$,$\ket{\tilde\nu_{\mathrm{H} }
     \ket{\tilde\nu_{\mathrm{H} }}
     \end{pmatrix},
 \end{equation*}
-
 where
-
 \begin{equation*}
     \eta(x) - \eta(0) = - \frac{\omega_{\mathrm{m}}}{2} x + \frac{\cos 2\theta_{\mathrm{m}}}{2} \int_0^x {\color{red}\delta\lambda (\tau)} d\tau.
 \end{equation*}
@@ -1347,7 +1334,7 @@ where
 
 
 
-\subsection{Two-frequency Matter Profile}
+% \subsection{Two-frequency Matter Profile}
 
 \begin{frame}{Two-frequency Matter Profile}
 
@@ -1363,6 +1350,77 @@ where
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% Dispersion Relation
+
+
+
+
+\section{Neutrino Oscillations and Dispersion Relation}
+
+\subsection{Neutrino Self-interactions}
+
+\begin{frame}{Neutrino Self-interactions}
+
+    
+\end{frame}
+
+
+\subsection{Linear Stability Analysis}
+
+\begin{frame}{Linear Stability Analysis}
+
+    
+\end{frame}
+
+\subsection{Dispersion Relation}
+
+\begin{frame}{Dispersion Relation}
+    
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Neutrino Halo Problem
+
+
+
+\section{Neutrino Halo Problem}
+
+
+
+\begin{frame}{Neutrino Halo}
+
+\end{frame}
+
+\subsection{Flavor Isospin Picture}
+
+\begin{frame}{Flavor Isospin}
+
+\end{frame}
+
+
+\subsection{Numerical Method}
+
+\begin{frame}{Relaxation Scheme}
+
+
+    
+\end{frame}
+
+
+\begin{frame}{Numerical Method}
+
+
+    
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Summary 
 
 
 \section{Summary}
