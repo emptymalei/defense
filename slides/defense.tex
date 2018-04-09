@@ -1241,7 +1241,7 @@ where
 
 
 \begin{frame}{Single Frequency Matter Potential}
-\setbeamercovered{invisible}
+% \setbeamercovered{invisible}
 
 
 
@@ -1307,7 +1307,7 @@ Consider Rabi oscillation with two driving frequencies $k_1=n_1 k$, $k_2=n_2 k$
      \cos(k_1x)\\
     -\sin(k_1x)\\
     0
-    \end{pmatrix} + \colorbox{blue!20}{$\alpha_2\begin{pmatrix}
+\end{pmatrix} + \colorbox{blue!50}{$\alpha_2\begin{pmatrix}
     \cos(k_2x)\\
     -\sin(k_2x)\\
     0
@@ -1327,7 +1327,7 @@ Corotating frame of the second potential,
      \cos(k_1-k_2x)\\
     -\sin(k_1-k_2x)\\
     0
-    \end{pmatrix} + \colorbox{blue!20}{$\alpha_2\begin{pmatrix}
+\end{pmatrix} + \colorbox{blue!50}{$\alpha_2\begin{pmatrix}
     1\\
     0\\
     0
@@ -1344,7 +1344,7 @@ Energy gap in this frame becomes the length of the vector
     0\\
     0\\
     \omega_m - k_2
-    \end{pmatrix} + \colorbox{blue!20}{$\alpha_2\begin{pmatrix}
+\end{pmatrix} + \colorbox{blue!50}{$\alpha_2\begin{pmatrix}
     1\\
     0\\
     0
@@ -1686,7 +1686,8 @@ Resonance condition
 
 
 \begin{columns}[T]
-   \begin{column}{0.5\textwidth}
+   \begin{column}{0.35\textwidth}
+
       Interaction Hamiltonian $\mathbf H_{\nu\nu}$
 
       \begin{equation*}
@@ -1695,19 +1696,39 @@ Resonance condition
 
       In Flavor Isospin space
       \begin{equation*}
-         2\sqrt{2}G_{\mathrm F} (1- \hat p \cdot \hat p') \vec s ( \mathbf p' )
+         -2\sqrt{2}G_{\mathrm F} (1- \hat p \cdot \hat p') n(\mathbf p') \vec s ( \mathbf p' )
       \end{equation*}
+
+      \only<2>{
+         % \begin{tcolorbox}
+            \begin{figure}
+               \includegraphics[width=\textwidth]{assets/self-interaction}
+            \end{figure}
+
+         % \end{tcolorbox}
+      }
+
 
    \end{column}
 
-   \begin{column}{0.5\textwidth}
+   \begin{column}{0.65\textwidth}
 
+\only<1>{
    % \begin{tcolorbox}
       \begin{figure}
          \includegraphics[width=\textwidth]{assets/self-interaction}
       \end{figure}
 
    % \end{tcolorbox}
+}
+
+
+
+\only<2>{
+\begin{figure}
+   \includegraphics[width=\textwidth]{assets/self-interaction-region}
+\end{figure}
+}
 
    \end{column}
 
@@ -1720,17 +1741,181 @@ Resonance condition
 
 \end{frame}
 
+\begin{frame}{Neutrino Self-interactions}
+
+\begin{columns}[T]
+
+\begin{column}{0.5\textwidth}
+
+\begin{itemize}
+   \item $H_v = - \eta \frac{1}{2}\omega \sigma_3 $
+   \item $H_m = \frac{1}{2}\lambda \sigma_3$
+   \item $H_{\nu\nu,2} = \frac{1}{2}\mu_1 \rho_1 \xi $
+   \item $H_{\nu\nu,1} = \frac{1}{2}\mu_2 \rho_2 \xi$
+\end{itemize}
+
+
+\begin{align*}
+   \mu_i =& \sqrt{2} G_{\mathrm F} (1-\cos(\theta_1 - \theta_2)) n_i \\
+   \xi =& (1-\cos(\theta_1-\theta_2))
+\end{align*}
+
+
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{figure}
+   \includegraphics[width=\textwidth]{assets/two-beams-model}
+\end{figure}
+\end{column}
+
+
+\end{columns}
+
+
+\end{frame}
+
+\begin{frame}{Fast Mode}
+
+
+   \begin{tcolorbox}[title=Characteristic Length Scales]
+
+      \begin{itemize}
+         \item \color{black} $\omega_{\mathrm v} = \delta m^2/2E $
+         \item \color{black} $\lambda \sim G_{\mathrm F} n_e$
+         \item \color{black} $\mu \sim G_{\mathrm F} (1-\mathbf p_1 \cdot \mathbf p_2) n_{\nu} $
+      \end{itemize}
+
+   \end{tcolorbox}
+
+
+\pause
+
+Vacuum oscillation oscillation frequencies
+   \begin{align*}
+      \omega_{\mathrm v} = \frac{\Delta m^2}{2E}  \sim& 6.3\times 10^{-3} \mathrm{m}^{-1}  \frac{\Delta m^2_{32}}{2.5\times 10^{-3} \mathrm{eV}^2 } \frac{1MeV}{E} \\
+   \sim & 1.90\times 10^{-4}  \mathrm{m}^{-1}  \frac{\delta m_{12}^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E}
+   \end{align*}
+
+\pause
+
+\begin{tcolorbox}
+   Neutrino self-interactions might lead to Faster oscillations.
+\end{tcolorbox}
+
+
+
+\end{frame}
+
+
 
 \subsection{Linear Stability Analysis}
 
 \begin{frame}{Linear Stability Analysis}
 
+   \begin{textblock*}{100pt}(220pt,10pt)
+   % \textblockcolour{black}
+   \TPoptions{showboxes = true }
+   \small
+   \begin{align*}
+      H_{\nu\nu,2} = \frac{1}{2}\mu_1 \rho_1 \xi , \qquad
+      H_{\nu\nu,1} = \frac{1}{2}\mu_2 \rho_2 \xi
+   \end{align*}
+   \end{textblock*}
+
+
+\begin{columns}[T]
+
+
+
+      \begin{column}{0.5\textwidth}
+      \begin{figure}
+         \includegraphics[width=\textwidth]{assets/two-beams-model}
+      \end{figure}
+      \end{column}
+
+\begin{column}{0.5\textwidth}
+
+   \begin{equation*}
+   i \partial_z \rho_i = \left[ H_i, \rho_i \right]
+   \end{equation*}
+
+   \begin{equation*}
+   \theta_1 = \theta_2 \equiv \theta
+   \end{equation*}
+
+\pause
+
+   \begin{align*}
+      \rho_i = \frac{1}{2}\begin{pmatrix}
+      1 & \epsilon_i\\
+      \epsilon_i^* & -1
+      \end{pmatrix}
+   \end{align*}
+
+\pause
+
+\begin{equation*}
+i\partial_z\begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix} = \frac{1}{2\sin\theta} \begin{pmatrix}
+\omega'_i + \mu f_2\xi & -\mu f_2 \xi \\
+-\mu f_1 \xi & \omega'_2 + \mu f_1 \xi
+\end{pmatrix}\begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix}
+\end{equation*}
+
+
+\end{column}
+
+
+\end{columns}
+
+
 
 \end{frame}
+
+
+\begin{frame}{Linear Stability Analysis}
+
+Identify the condition for complex eigenvalues
+
+\begin{equation*}
+   -2\sqrt{-f_1f_2\xi^2}< \eta(- \omega_1 + \omega_2)/\mu + (f_2 - f_1)\xi < 2\sqrt{-f_1f_2\xi^2}
+\end{equation*}
+
+\end{frame}
+
 
 \subsection{Dispersion Relation}
 
 \begin{frame}{Dispersion Relation}
+
+\begin{equation*}
+   \operatorname{Det}(\omega + N^{\nu}_{\phantom{\mu}\nu}) = 0,
+\end{equation*}
+where
+\begin{equation*}
+   N^\mu_{\phantom{\mu}\nu} = \omega P^\mu_{\phantom{\mu}\nu}\to  \begin{pmatrix}
+\frac{1}{2}  I_0 & 0 & 0 & -\frac{1}{2}I_1\\
+0 & -\frac{1}{4}(I_0-I_2) & 0 & 0\\
+0 & 0 & -\frac{1}{4}(I_0-I_2) & 0 \\
+\frac{1}{2}I_1 & 0 & 0 & -\frac{1}{2}I_2
+\end{pmatrix}
+\end{equation*}
+\begin{equation*}
+   I_n(\theta)=\int_{\cos\theta_2}^{\cos\theta_1} d\cos\theta G(\theta) \frac{\cos^n\theta}{1 - n \cos\theta }
+\end{equation*}
+
+\pause
+\begin{tcolorbox}[title=Solutions]
+\begin{equation*}
+\omega = \frac{1}{4}(I_0-I_2), \quad -\frac{1}{4}\left(I_0-I_2\pm \sqrt{ (I_0-2I_1+I_2)(I_0+2I_1+I_2) }\right)
+\end{equation*}
+\end{tcolorbox}
 
 \end{frame}
 
@@ -1747,11 +1932,44 @@ Resonance condition
 
 \begin{frame}{Neutrino Halo}
 
+\only<1>{
+\begin{figure}
+   \includegraphics[width=\textwidth]{assets/halo-line-model}
+\end{figure}
+}
+
+\only<2>{
+
+\begin{columns}[T]
+   \begin{column}{0.5\textwidth}
+      Assumptions
+      \begin{itemize}
+         \item Reflection obays Snell's law.
+      \end{itemize}
+
+   \end{column}
+
+   \begin{column}{0.5\textwidth}
+      \begin{figure}
+         \includegraphics[width=\textwidth]{assets/halo-line-model}
+      \end{figure}
+   \end{column}
+\end{columns}
+
+
+}
+
 \end{frame}
 
 \subsection{Flavor Isospin Picture}
 
 \begin{frame}{Flavor Isospin}
+
+
+\begin{figure}
+   \includegraphics[width=\textwidth]{assets/halo-line-model-single-beam}
+\end{figure}
+
 
 \end{frame}
 
