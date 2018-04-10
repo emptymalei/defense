@@ -1944,7 +1944,10 @@ where
    \begin{column}{0.5\textwidth}
       Assumptions
       \begin{itemize}
+         \item Neutrinos are translational symmetric on the emission line.
          \item Reflection obays Snell's law.
+         \item Neutrinos are reflected on a fixed surface $z=L$.
+         \item Neutrino reflections are translational symmetric.
       \end{itemize}
 
    \end{column}
@@ -1978,12 +1981,84 @@ where
 
 \begin{frame}{Relaxation Scheme}
 
+\begin{tcolorbox}[title=Algorithm,standard jigsaw,
+    opacityback=0]
+   \begin{enumerate}
+      \item Calculate forward beam using null backward beam;
+      \item Calculate backward beam using forward beam calculated in step 1;
+      \item Calculate forward beam using backward beam calculated in step 2;
+      \item Repeat 2 and 3 until the beams reach equilibrium.
+   \end{enumerate}
+\end{tcolorbox}
+
+
 
 
 \end{frame}
 
 
+
+
 \begin{frame}{Numerical Method}
+
+\begin{tcolorbox}
+\begin{figure}
+   \includegraphics[width=0.9\textwidth]{assets/relax-color}
+   \caption*{\color{black}Horizontal axis is the location of neutrinos; Vertical axis is the number of iteration steps; Color indicates the electron flavor probability.}
+\end{figure}
+\end{tcolorbox}
+
+\end{frame}
+
+
+\begin{frame}{Numerical Method}
+
+\begin{tcolorbox}
+   \begin{figure}
+      \includegraphics[width=\textwidth]{assets/halo-mu-4-r-multiple}
+   \end{figure}
+\end{tcolorbox}
+
+\end{frame}
+
+\begin{frame}{Linear Stability Analysis}
+
+EoM
+
+   \begin{align*}
+    i \partial_t \vec s_F &= \mathbf s_F \times (\vec {H}_v +R \mu \vec s_B) \\
+      i\partial_t \vec s_B &= \vec s_B \times (- \vec H_v - \mu \vec s_F) .
+   \end{align*}
+
+Compare with bipolar
+
+\begin{align*}
+    i\partial_t \vec s &= \mathbf s \times ( \eta \vec H_v + \alpha \mu \bar{\vec s} )\\
+    i\partial_t \bar{\vec s} &= \bar{\vec s} \times ( \eta \vec H_v + \mu \vec s )
+\end{align*}
+
+
+\end{frame}
+
+
+\begin{frame}{Linear Stability Analysis}
+
+
+\begin{tcolorbox}
+
+   % \only<1>{
+      \begin{figure}
+         \includegraphics[width=\textwidth]{assets/halo-mu-1-reflection-0p07}
+      \end{figure}
+      % }
+
+   % \only<2>{
+   %    \begin{figure}
+   %       \includegraphics[width=\textwidth]{assets/halo-mu-4-compare-bipolar}
+   %    \end{figure}
+   % }
+
+\end{tcolorbox}
 
 
 
