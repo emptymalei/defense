@@ -1775,7 +1775,61 @@ Resonance condition
 
 \end{frame}
 
-\begin{frame}{Fast Mode}
+
+\begin{frame}{Neutrino Self-interactions}
+
+\begin{tcolorbox}
+   \only<1>{
+   \begin{figure}
+      \includegraphics[width=\textwidth]{assets/bipolar-animation/bipolar-animie001.png}
+   \end{figure}
+   }
+   \only<2>{
+   \begin{figure}
+      \includegraphics[width=\textwidth]{assets/bipolar-animation/bipolar-animie019.png}
+   \end{figure}
+   }
+   \only<3>{
+   \begin{figure}
+      \includegraphics[width=\textwidth]{assets/bipolar-animation/bipolar-animie021.png}
+   \end{figure}
+   }
+   \only<4>{
+   \begin{figure}
+      \includegraphics[width=\textwidth]{assets/bipolar-animation/bipolar-animie030.png}
+   \end{figure}
+   }
+   \only<5>{
+   \begin{figure}
+      \includegraphics[width=\textwidth]{assets/bipolar-animation/bipolar-animie038.png}
+   \end{figure}
+   }
+   \only<6>{
+   \begin{figure}
+      \includegraphics[width=\textwidth]{assets/bipolar-animation/bipolar-animie078.png}
+   \end{figure}
+   }
+   \only<7>{
+   \begin{figure}
+      \includegraphics[width=\textwidth]{assets/bipolar-animation/bipolar-animie089.png}
+   \end{figure}
+   }
+   \only<8>{
+   \begin{figure}
+      \includegraphics[width=\textwidth]{assets/bipolar-animation/bipolar-animie100.png}
+   \end{figure}
+   }
+\end{tcolorbox}
+
+% \movie[autostart]{Movie}{assets/bipolar-movie.mp4}
+
+
+
+\end{frame}
+
+
+
+\begin{frame}{Neutrino Self-interactions}
 
 
    \begin{tcolorbox}[title=Characteristic Length Scales]
@@ -1828,20 +1882,21 @@ Vacuum oscillation oscillation frequencies
 
 
 
-      \begin{column}{0.5\textwidth}
+      \begin{column}{0.45\textwidth}
       \begin{figure}
          \includegraphics[width=\textwidth]{assets/two-beams-model}
       \end{figure}
       \end{column}
 
-\begin{column}{0.5\textwidth}
+\begin{column}{0.55\textwidth}
 
+$\rho_1$: neutrinos; $\rho_2$: antineutrinos
    \begin{equation*}
    i \partial_z \rho_i = \left[ H_i, \rho_i \right]
    \end{equation*}
 
    \begin{equation*}
-   \theta_1 = \theta_2 \equiv \theta
+   \theta_1 = \theta_2 \equiv \theta \equiv \pi/6
    \end{equation*}
 
 \pause
@@ -1855,13 +1910,14 @@ Vacuum oscillation oscillation frequencies
 
 \pause
 
+\small
 \begin{equation*}
-i\partial_z\begin{pmatrix}
+i\partial_{z}\begin{pmatrix}
 \epsilon_1 \\
 \epsilon_2
 \end{pmatrix} = \frac{1}{2\sin\theta} \begin{pmatrix}
-\omega'_i + \mu f_2\xi & -\mu f_2 \xi \\
--\mu f_1 \xi & \omega'_2 + \mu f_1 \xi
+\omega_{\mathrm v} - \mu \xi &  \mu  \xi \\
+-\mu \xi & -\omega_{\mathrm v} + \mu  \xi
 \end{pmatrix}\begin{pmatrix}
 \epsilon_1 \\
 \epsilon_2
@@ -1881,11 +1937,25 @@ i\partial_z\begin{pmatrix}
 
 \begin{frame}{Linear Stability Analysis}
 
+
+Eigenvalues
+
+\begin{equation*}
+   \pm \sqrt{ \omega_{\mathrm v} ( \omega_{\mathrm v}- 2\mu \xi ) }
+\end{equation*}
+
 Identify the condition for complex eigenvalues
 
 \begin{equation*}
-   -2\sqrt{-f_1f_2\xi^2}< \eta(- \omega_1 + \omega_2)/\mu + (f_2 - f_1)\xi < 2\sqrt{-f_1f_2\xi^2}
+   \omega_{\mathrm v} ( \omega_{\mathrm v}- 2\mu \xi ) < 0
 \end{equation*}
+
+\pause
+
+\begin{tcolorbox}
+   \centering
+   More general approach?
+\end{tcolorbox}
 
 \end{frame}
 
@@ -1897,25 +1967,159 @@ Identify the condition for complex eigenvalues
 \begin{equation*}
    \operatorname{Det}(\omega + N^{\nu}_{\phantom{\mu}\nu}) = 0,
 \end{equation*}
-where
+
+
+   \begin{equation*}
+      I_n(\theta)=\int_{\cos\theta_2}^{\cos\theta_1} d\cos\theta G(\theta) \frac{\cos^n\theta}{1 - n \cos\theta }
+   \end{equation*}
+
+
+\only<1>{
+
+   \begin{equation*}
+      N^\mu_{\phantom{\mu}\nu} = \omega P^\mu_{\phantom{\mu}\nu}\to  \begin{pmatrix}
+   \frac{1}{2}  I_0 & 0 & 0 & -\frac{1}{2}I_1\\
+   0 & -\frac{1}{4}(I_0-I_2) & 0 & 0\\
+   0 & 0 & -\frac{1}{4}(I_0-I_2) & 0 \\
+   \frac{1}{2}I_1 & 0 & 0 & -\frac{1}{2}I_2
+   \end{pmatrix}
+   \end{equation*}
+   }
+
+
+\only<2>{
+   \begin{tcolorbox}[title=Solutions]
+   \begin{equation*}
+   \omega = \frac{1}{4}(I_0-I_2), \quad -\frac{1}{4}\left(I_0-I_2\pm \sqrt{ (I_0-2I_1+I_2)(I_0+2I_1+I_2) }\right)
+   \end{equation*}
+   \end{tcolorbox}
+}
+
+\end{frame}
+
+
+\begin{frame}{Dispersion Relation}
+
+
+
+   \begin{columns}[T]
+
+\begin{column}{0.5\textwidth}
+   \begin{figure}
+     \includegraphics[width=\linewidth]{assets/dr/spectDBWC1DRDBMAAPltBlob.pdf}
+     \caption*{MAA solutions}
+  \end{figure}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+   \begin{figure}
+      \includegraphics[width=\linewidth]{assets/dr/spectDBWC1DRDBMZAPltBlob.pdf}
+      \caption*{ MZA solutions}
+   \end{figure}
+\end{column}
+
+   \end{columns}
+
+\begin{tcolorbox}
+   \centering
+   Two beams
+\end{tcolorbox}
+
+\end{frame}
+
+\begin{frame}{Dispersion Relation}
+
+
+
+   \begin{columns}[T]
+
+\begin{column}{0.5\textwidth}
+   \begin{figure}
+     \includegraphics[width=\linewidth]{assets/dr/spectDB3WC4DRDBMAAPltBlob.pdf}
+     \caption*{MAA solutions}
+  \end{figure}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+   \begin{figure}
+      \includegraphics[width=\linewidth]{assets/dr/spectDB3WC4DRDBMZAPltBlob.pdf}
+      \caption*{ MZA solutions}
+   \end{figure}
+\end{column}
+
+   \end{columns}
+
+   \begin{tcolorbox}
+      \centering
+      Three beams
+   \end{tcolorbox}
+
+
+\end{frame}
+
+
+\begin{frame}{Dispersion Relations}
+
+   \begin{figure}
+      \minipage{0.49\textwidth}
+        \includegraphics[width=\linewidth]{assets/dr/spectGarchingPlt.pdf}
+      \endminipage\hfill
+      \minipage{0.49\textwidth}
+      \includegraphics[width=\linewidth]{assets/dr/spectGarchingDRLSAPltBlob.pdf}
+      \endminipage\hfill
+      \caption*{Dispersion relation and linear stability analysis (right panel) for a spectrum constructed from Garching 1D simulation data (left panel). Solid red line is dispersion relation for MAA solution while blue and green lines are for MZA solutions. Light red (green and green) blob is instability for MAA (MZA) solution.
+       }
+   \end{figure}
+
+
+\end{frame}
+
+\begin{frame}{Dispersion Relations}
+
 \begin{equation*}
-   N^\mu_{\phantom{\mu}\nu} = \omega P^\mu_{\phantom{\mu}\nu}\to  \begin{pmatrix}
-\frac{1}{2}  I_0 & 0 & 0 & -\frac{1}{2}I_1\\
-0 & -\frac{1}{4}(I_0-I_2) & 0 & 0\\
-0 & 0 & -\frac{1}{4}(I_0-I_2) & 0 \\
-\frac{1}{2}I_1 & 0 & 0 & -\frac{1}{2}I_2
-\end{pmatrix}
-\end{equation*}
-\begin{equation*}
-   I_n(\theta)=\int_{\cos\theta_2}^{\cos\theta_1} d\cos\theta G(\theta) \frac{\cos^n\theta}{1 - n \cos\theta }
+   k = \frac{1}{4} \int \mathrm du G(u) \frac{ 1 - u^2 }{ \omega/k - u }.
+   \label{eqn-k-omega-relation}
 \end{equation*}
 
-\pause
-\begin{tcolorbox}[title=Solutions]
+
+\begin{align*}
+\operatorname{Re}(k) =& \frac{1}{4}\left(  \mathcal{P} \int \mathrm d u G(u) \frac{ 1 - u^2 }{ - u }  \right)\label{eqn-re-k-arbitrary-spectrum} \\
+\operatorname{Im}(k) =&  \frac{\pi}{4}G(0) \operatorname{Sign}\left( \omega \right) \operatorname{Sign}\left(  \operatorname{Im}(k)  \right).
+\end{align*}
+
 \begin{equation*}
-\omega = \frac{1}{4}(I_0-I_2), \quad -\frac{1}{4}\left(I_0-I_2\pm \sqrt{ (I_0-2I_1+I_2)(I_0+2I_1+I_2) }\right)
+   \lvert \operatorname{Im}(k) \rvert  =  \frac{\pi}{4}\lvert G(0)\rvert .
 \end{equation*}
-\end{tcolorbox}
+
+
+
+\begin{align*}
+&\left(4\operatorname{Re}(k) - \mathcal P \int \frac{G(u)}{u} \mathrm d u + U_1 \right)^2  - \left( \operatorname{Sign}(\omega \operatorname{Im}(k) )\pi G(0) +4 \operatorname{Im}(k) \right)^2 \\
+=& - \left( \mathcal P \int \frac{G(u)}{u} \mathrm du + U_1 \right) \pi \operatorname{Sign}(\omega \operatorname{Im}(k) ) G(0),
+\end{align*}
+
+\begin{equation*}
+   \operatorname{Im}(k) = - \frac{1}{4} \pi G(0) \operatorname{Sign}(\omega \operatorname{Im}(k) ) \left(  1 \pm \frac{ \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }{ 4 \operatorname{Re}(k) - \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }  \right)
+\end{equation*}
+
+\end{frame}
+
+
+
+\begin{frame}{Dispersion Relations}
+
+   \begin{figure}
+      \minipage{0.49\textwidth}
+      \includegraphics[width=\linewidth]{assets/dr/spectBoxC1MAADRPltBlob.pdf}
+      \endminipage\hfill
+      \minipage{0.49\textwidth}
+      \includegraphics[width=\linewidth]{assets/dr/spectBoxC1MZADRPltBlob.pdf}
+      \endminipage\hfill
+      \caption*{Dispersion relation and linear stability analysis for box spectrum. The box spectrum is defined to be $-0.1$ within range $u\in [-1,-0.3)$ and $1$ within range $u\in [-0.3,1]$. Left panel shows the dispersion relation and the complex $k$ for real $\omega$ for MAA solution. Right panel is the corresponding result for MZA solution. Dash-dotted gray lines are $\omega= \pm k$ which sets the boundaries of the forbidden region for dispersion relation.
+       }
+   \end{figure}
+
+
 
 \end{frame}
 
