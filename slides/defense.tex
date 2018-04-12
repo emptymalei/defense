@@ -1372,7 +1372,7 @@ D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{
 
 \begin{frame}{Rabi Oscillations With Multiple Driving Frequencies}
 
-\begin{textblock*}{100pt}(250pt,18pt)
+\begin{textblock*}{100pt}(260pt,10pt)
 % \textblockcolour{black}
 \tiny
 \begin{equation*}
@@ -1699,36 +1699,26 @@ Resonance condition
          -2\sqrt{2}G_{\mathrm F} (1- \hat p \cdot \hat p') n(\mathbf p') \vec s ( \mathbf p' )
       \end{equation*}
 
-      \only<2>{
+      % \only<2>{
          % \begin{tcolorbox}
-            \begin{figure}
-               \includegraphics[width=\textwidth]{assets/self-interaction}
-            \end{figure}
+            % \begin{figure}
+            %    \includegraphics[width=\textwidth]{assets/self-interaction}
+            % \end{figure}
 
          % \end{tcolorbox}
-      }
+      % }
 
 
    \end{column}
 
    \begin{column}{0.65\textwidth}
 
-\only<1>{
-   % \begin{tcolorbox}
       \begin{figure}
          \includegraphics[width=\textwidth]{assets/self-interaction}
       \end{figure}
 
-   % \end{tcolorbox}
-}
 
 
-
-\only<2>{
-\begin{figure}
-   \includegraphics[width=\textwidth]{assets/self-interaction-region}
-\end{figure}
-}
 
    \end{column}
 
@@ -1745,7 +1735,7 @@ Resonance condition
 
 \begin{columns}[T]
 
-\begin{column}{0.5\textwidth}
+\begin{column}{0.3\textwidth}
 
 \begin{itemize}
    \item $H_v = - \eta \frac{1}{2}\omega \sigma_3 $
@@ -1753,17 +1743,21 @@ Resonance condition
    \item $H_{\nu\nu,2} = \frac{1}{2}\mu_1 \rho_1 \xi $
    \item $H_{\nu\nu,1} = \frac{1}{2}\mu_2 \rho_2 \xi$
 \end{itemize}
+where
+\begin{equation*}
+   \mu_i = \sqrt{2} G_{\mathrm F} \xi n_i
+\end{equation*}
 
+Geometric factor
+\begin{equation*}
+\xi = (1-\cos(\theta_1-\theta_2))
+\end{equation*}
 
-\begin{align*}
-   \mu_i =& \sqrt{2} G_{\mathrm F} (1-\cos(\theta_1 - \theta_2)) n_i \\
-   \xi =& (1-\cos(\theta_1-\theta_2))
-\end{align*}
 
 
 \end{column}
 
-\begin{column}{0.5\textwidth}
+\begin{column}{0.7\textwidth}
 \begin{figure}
    \includegraphics[width=\textwidth]{assets/two-beams-model}
 \end{figure}
@@ -1832,34 +1826,50 @@ Resonance condition
 \begin{frame}{Neutrino Self-interactions}
 
 
-   \begin{tcolorbox}[title=Characteristic Length Scales]
+   \begin{tcolorbox}[title=Characteristic Length Scales,standard jigsaw,
+    opacityback=0]
 
       \begin{itemize}
-         \item \color{black} $\omega_{\mathrm v} = \delta m^2/2E $
-         \item \color{black} $\lambda \sim G_{\mathrm F} n_e$
-         \item \color{black} $\mu \sim G_{\mathrm F} (1-\mathbf p_1 \cdot \mathbf p_2) n_{\nu} $
+         \item  $\omega_{\mathrm v} = \delta m^2/2E $
+         \item  $\lambda \sim G_{\mathrm F} n_e$
+         \item  $\mu \sim G_{\mathrm F} (1-\mathbf p_1 \cdot \mathbf p_2) n_{\nu} $
       \end{itemize}
 
    \end{tcolorbox}
 
 
-\pause
+\only<1,2>{
+
 
 Vacuum oscillation oscillation frequencies
    \begin{align*}
-      \omega_{\mathrm v} = \frac{\Delta m^2}{2E}  \sim& 6.3\times 10^{-3} \mathrm{m}^{-1}  \frac{\Delta m^2_{32}}{2.5\times 10^{-3} \mathrm{eV}^2 } \frac{1MeV}{E} \\
-   \sim & 1.90\times 10^{-4}  \mathrm{m}^{-1}  \frac{\delta m_{12}^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E}
+      \omega_{\mathrm v} = \frac{\Delta m^2}{2E}  \sim& \frac{2\pi}{ 1  \mathrm{km} }  \left(\frac{\Delta m^2_{32}}{2.5\times 10^{-3} \mathrm{eV}^2 } \right) \left( \frac{1MeV}{E} \right) \\
+   \sim & \frac{2\pi}{ 33  \mathrm{km} } \left( \frac{\delta m_{12}^2}{7.5\times 10^{-5}\mathrm{eV}^2} \right) \left( \frac{1\mathrm{MeV}}{E} \right)
    \end{align*}
+}
 
-\pause
-
+\only<2>{
 \begin{tcolorbox}
-   Neutrino self-interactions might lead to Faster oscillations.
+   \centering
+   Neutrino self-interactions might lead to faster oscillations, since $\mu \gg \omega_{\mathrm v}$.
 \end{tcolorbox}
+}
 
+\only<3>{
+
+Suppose we have neutrino flux $10^{50}\mathrm{ergs\cdot s^{-1}}$. We estimate the potential at radius $R$ to be
+
+\begin{equation*}
+   \mu \sim  \frac{1}{0.01 km} \left(\frac{100\mathrm{km}}{R}\right)^2 \left(\frac{1\mathrm{MeV}}{E}\right)
+\end{equation*}
+
+
+}
 
 
 \end{frame}
+
+
 
 
 
@@ -1882,13 +1892,13 @@ Vacuum oscillation oscillation frequencies
 
 
 
-      \begin{column}{0.45\textwidth}
+      \begin{column}{0.6\textwidth}
       \begin{figure}
          \includegraphics[width=\textwidth]{assets/two-beams-model}
       \end{figure}
       \end{column}
 
-\begin{column}{0.55\textwidth}
+\begin{column}{0.4\textwidth}
 
 $\rho_1$: neutrinos; $\rho_2$: antineutrinos
    \begin{equation*}
@@ -1896,7 +1906,7 @@ $\rho_1$: neutrinos; $\rho_2$: antineutrinos
    \end{equation*}
 
    \begin{equation*}
-   \theta_1 = \theta_2 \equiv \theta \equiv \pi/6
+   \theta_1 =  2\pi/3, \theta_2 = \pi/6
    \end{equation*}
 
 \pause
@@ -1910,12 +1920,12 @@ $\rho_1$: neutrinos; $\rho_2$: antineutrinos
 
 \pause
 
-\small
+
 \begin{equation*}
 i\partial_{z}\begin{pmatrix}
 \epsilon_1 \\
 \epsilon_2
-\end{pmatrix} = \frac{1}{2\sin\theta} \begin{pmatrix}
+\end{pmatrix} = \begin{pmatrix}
 \omega_{\mathrm v} - \mu \xi &  \mu  \xi \\
 -\mu \xi & -\omega_{\mathrm v} + \mu  \xi
 \end{pmatrix}\begin{pmatrix}
@@ -1961,6 +1971,12 @@ Identify the condition for complex eigenvalues
 
 
 \subsection{Dispersion Relation}
+
+
+\begin{frame}{Equation of Motion with Self-interactions}
+
+
+\end{frame}
 
 \begin{frame}{Dispersion Relation}
 
@@ -2098,9 +2114,9 @@ Identify the condition for complex eigenvalues
 =& - \left( \mathcal P \int \frac{G(u)}{u} \mathrm du + U_1 \right) \pi \operatorname{Sign}(\omega \operatorname{Im}(k) ) G(0),
 \end{align*}
 
-\begin{equation*}
-   \operatorname{Im}(k) = - \frac{1}{4} \pi G(0) \operatorname{Sign}(\omega \operatorname{Im}(k) ) \left(  1 \pm \frac{ \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }{ 4 \operatorname{Re}(k) - \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }  \right)
-\end{equation*}
+% \begin{equation*}
+%    \operatorname{Im}(k) = - \frac{1}{4} \pi G(0) \operatorname{Sign}(\omega \operatorname{Im}(k) ) \left(  1 \pm \frac{ \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }{ 4 \operatorname{Re}(k) - \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }  \right)
+% \end{equation*}
 
 \end{frame}
 
@@ -2124,149 +2140,6 @@ Identify the condition for complex eigenvalues
 \end{frame}
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Neutrino Halo Problem
-
-
-
-\section{Neutrino Halo Problem}
-
-
-
-\begin{frame}{Neutrino Halo}
-
-\only<1>{
-\begin{figure}
-   \includegraphics[width=\textwidth]{assets/halo-line-model}
-\end{figure}
-}
-
-\only<2>{
-
-\begin{columns}[T]
-   \begin{column}{0.5\textwidth}
-      Assumptions
-      \begin{itemize}
-         \item Neutrinos are translational symmetric on the emission line.
-         \item Reflection obays Snell's law.
-         \item Neutrinos are reflected on a fixed surface $z=L$.
-         \item Neutrino reflections are translational symmetric.
-      \end{itemize}
-
-   \end{column}
-
-   \begin{column}{0.5\textwidth}
-      \begin{figure}
-         \includegraphics[width=\textwidth]{assets/halo-line-model}
-      \end{figure}
-   \end{column}
-\end{columns}
-
-
-}
-
-\end{frame}
-
-\subsection{Flavor Isospin Picture}
-
-\begin{frame}{Flavor Isospin}
-
-
-\begin{figure}
-   \includegraphics[width=\textwidth]{assets/halo-line-model-single-beam}
-\end{figure}
-
-
-\end{frame}
-
-
-\subsection{Numerical Method}
-
-\begin{frame}{Relaxation Scheme}
-
-\begin{tcolorbox}[title=Algorithm,standard jigsaw,
-    opacityback=0]
-   \begin{enumerate}
-      \item Calculate forward beam using null backward beam;
-      \item Calculate backward beam using forward beam calculated in step 1;
-      \item Calculate forward beam using backward beam calculated in step 2;
-      \item Repeat 2 and 3 until the beams reach equilibrium.
-   \end{enumerate}
-\end{tcolorbox}
-
-
-
-
-\end{frame}
-
-
-
-
-\begin{frame}{Numerical Method}
-
-\begin{tcolorbox}
-\begin{figure}
-   \includegraphics[width=0.9\textwidth]{assets/relax-color}
-   \caption*{\color{black}Horizontal axis is the location of neutrinos; Vertical axis is the number of iteration steps; Color indicates the electron flavor probability.}
-\end{figure}
-\end{tcolorbox}
-
-\end{frame}
-
-
-\begin{frame}{Numerical Method}
-
-\begin{tcolorbox}
-   \begin{figure}
-      \includegraphics[width=\textwidth]{assets/halo-mu-4-r-multiple}
-   \end{figure}
-\end{tcolorbox}
-
-\end{frame}
-
-\begin{frame}{Linear Stability Analysis}
-
-EoM
-
-   \begin{align*}
-    i \partial_t \vec s_F &= \mathbf s_F \times (\vec {H}_v +R \mu \vec s_B) \\
-      i\partial_t \vec s_B &= \vec s_B \times (- \vec H_v - \mu \vec s_F) .
-   \end{align*}
-
-Compare with bipolar
-
-\begin{align*}
-    i\partial_t \vec s &= \mathbf s \times ( \eta \vec H_v + \alpha \mu \bar{\vec s} )\\
-    i\partial_t \bar{\vec s} &= \bar{\vec s} \times ( \eta \vec H_v + \mu \vec s )
-\end{align*}
-
-
-\end{frame}
-
-
-\begin{frame}{Linear Stability Analysis}
-
-
-\begin{tcolorbox}
-
-   % \only<1>{
-      \begin{figure}
-         \includegraphics[width=\textwidth]{assets/halo-mu-1-reflection-0p07}
-      \end{figure}
-      % }
-
-   % \only<2>{
-   %    \begin{figure}
-   %       \includegraphics[width=\textwidth]{assets/halo-mu-4-compare-bipolar}
-   %    \end{figure}
-   % }
-
-\end{tcolorbox}
-
-
-
-\end{frame}
 
 
 
@@ -2376,103 +2249,7 @@ Supported by DOE EPSCoR grant \#DE-SC0008142 at UNM.
 
 \appendix
 
-\begin{frame}{Hamiltonian, and Basis, and Rabi Oscillations}
-
-
-
-\begin{tcolorbox}[title=Hamiltonian in Background Matter Basis]
-    \begin{equation*}
-    \mathbf {H} = \frac{1}{2}\left( - \omega_{\mathrm{m}} + {\color{red}\delta \lambda(x)} \cos 2\theta_{\mathrm{m}} \right) \sigma_3 - \frac{  {\color{red}\delta \lambda(x)}  }{2} \sin 2\theta_{\mathrm{m}} \sigma_1.
-\end{equation*}
-\end{tcolorbox}
-
-
-Matter profile
-\begin{equation*}
-    \lambda(x) = \lambda_0 + {\color{red}A \cos (k x)},
-\end{equation*}
-
-
-\begin{equation*}
-    \mathbf {H} = \frac{1}{2}\left( - \omega_{\mathrm{m}} +  \cos 2\theta_{\mathrm{m}}{\color{red}A\cos(kx)} \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m} }  }{2}{\color{red}A \cos(kx)}  \sigma_1.
-\end{equation*}
-
-
-
-
-
-\end{frame}
-
-
-\begin{frame}{Stimulated Neutrino Oscillations}
-
-
-\only<1-1>{
-% Matter profile
-\begin{tcolorbox}[title=Matter Profile]
-\begin{equation*}
-    \lambda(x)  = \lambda_0 + {\color{red}\delta\lambda(x)}
-\end{equation*}
-\end{tcolorbox}
-
-
-% Basis
-
-
-\begin{tcolorbox}[title=Basis]
-
-Background matter basis: Hamiltonian is diagonalized with only background matter profile $\lambda_0$,
-
-\begin{equation*}
-    \mathrm{H}_{\mathrm{background}} = -\frac{\omega_{\mathrm{m}}}{2} \boldsymbol{\sigma_3}.
-\end{equation*}
-
-\end{tcolorbox}
-
-
-% Hamiltonian of with perturbation in matter profile, in background matter basis
-\begin{tcolorbox}[title=Hamiltonian]
-
-\begin{equation*}
-    \mathbf H = \frac{1}{2}\left( - \omega_{\mathrm{m}} + {\color{red}\delta \lambda(x)} \cos 2\theta_{\mathrm{m}} \right) \boldsymbol{\sigma_3} - \frac{{\color{red}\delta \lambda(x) } }{2} \sin \theta_{\mathrm{m}} \boldsymbol{\sigma_1}.
-\end{equation*}
-
-
-\end{tcolorbox}
-
-}
-
-\only<2-2>{
-
-% \begin{tcolorbox}
-% Kneller, J. P., McLaughlin, G. C., \& Patton, K. M. (2013). J. Phys. G: Nucl. Part. Phys. {\bf{40}} (2013) 055002.
-% \end{tcolorbox}
-
-\begin{tcolorbox}
-P. Krastev and A. Smirnov (1989); J. Kneller et al (2013);\\ K. Patton et al (2014);
-\end{tcolorbox}
-
-
-\begin{figure}
-\includegraphics[width=0.8\textwidth]{assets/stimulated-oscillation-phenomenon.png}
-%stimulated-neutrino-oscillations-kneller.png}
-\caption*{Stimulated oscillations. $\lambda(x) = \lambda_0 +  A \sin (k x)$  with $\hat x = \omega_{\mathrm m} x $, $A=0.1\omega_{\mathrm m}$, $k=0.995\omega_{\mathrm m}$, $\theta_{\mathrm{m}}=\pi/6$}
-\end{figure}
-
-
-}
-
-
-
-
-
-\end{frame}
-
-
-
-
-
-
+\input{appendix.tex}
 
 
 
