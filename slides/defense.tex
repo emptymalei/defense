@@ -1948,10 +1948,10 @@ i\partial_{z}\begin{pmatrix}
 \begin{frame}{Linear Stability Analysis}
 
 
-Eigenvalues
+Eigenvalues or collective oscillation frequencies
 
 \begin{equation*}
-   \pm \sqrt{ \omega_{\mathrm v} ( \omega_{\mathrm v}- 2\mu \xi ) }
+   K_z = \pm \sqrt{ \omega_{\mathrm v} ( \omega_{\mathrm v}- 2\mu \xi ) }
 \end{equation*}
 
 Identify the condition for complex eigenvalues
@@ -1970,29 +1970,235 @@ Identify the condition for complex eigenvalues
 \pause
 
 \begin{tcolorbox}
-   \centering
-   Continuous emission angles?
+    \center
+    $K_z$ is instability in $z$ direction for our model.
 \end{tcolorbox}
 
+\pause
+
+\begin{tcolorbox}
+    \centering
+    Similar analysis can be done for all four dimensions $t, x, y, z$,
+    \begin{equation*}
+        \left( \Omega, K_x, K_y, K_z \right)
+    \end{equation*}
+    
+ \end{tcolorbox}
 \end{frame}
 
+
+
+% \begin{frame}{Dispersion Relation}
+
+%     \begin{tcolorbox}
+%         \centering
+%         Continuous emission angles?
+%      \end{tcolorbox}
+     
+% \end{frame}
 
 \subsection{Dispersion Relation}
 
 
-\begin{frame}{Equation of Motion with Self-interactions}
+\begin{frame}{ Dispersion Relation }
 
+    \begin{tcolorbox}[standard jigsaw,opacityback=0]
+        \color{white}
+        Izaguirre, I., Raffelt, G., \& Tamborra, I. (2017). \emph{Fast Pairwise Conversion of Supernova Neutrinos: A Dispersion Relation Approach}. Physical Review Letters, 118(2), 021101.
+    \end{tcolorbox}
+    
+    % \pause
+    
+    \begin{itemize}[<+->]
+        \item Linear stability analysis $\rightarrow$ dispersion relation for $\Omega$ and $\mathbf K$.
+        \item Instabilities occur in dispersion relation gaps.
+    \end{itemize}
+    
+    \end{frame}
+
+
+\begin{frame}{Dispersion Relation}
+
+Equation of motion for off-diagonal element of density matrix (Izaguirre et al, 2017)
+
+\only<1>{
 \begin{equation*}
-   i(\partial_t + \hat v )
+   i(\partial_t + {\boldsymbol v} \cdot \boldsymbol{\nabla}_{\boldsymbol{r}} ) \epsilon (\boldsymbol v) =  v^\mu \left( \Lambda + \Phi \right)_\mu - \int d\Gamma' v^\mu v'_\mu G(\boldsymbol v') \epsilon(\boldsymbol v')
 \end{equation*}
+}
+
+
+\only<2->{
+\begin{equation*}
+   i(\partial_t + {\boldsymbol v} \cdot \boldsymbol{\nabla}_r  ) \epsilon (\boldsymbol v) = \colorbox{blue!50}{$ v^\mu$} ( \colorbox{red!50}{$\Lambda$} + \colorbox{ao!60}{$\Phi$} )_\mu - \int d\Gamma' v^\mu v'_\mu \colorbox{armygreen!70}{$G(\boldsymbol v')$} \epsilon(\boldsymbol v')
+\end{equation*}
+}
+
+
+\pause
+
+\begin{itemize}
+    \item \colorbox{blue!50}{$ v^\mu$}:  four-velocity of neutrinos $(1, \boldsymbol v) $
+    \item \colorbox{red!50}{$\Lambda$}: matter contribution $( \sqrt{2}G_{\mathrm F} n_{\mathrm e}, \sqrt{2}G_F n_e \boldsymbol v_{\mathrm e} )$
+    \item \colorbox{ao!60}{$\Phi$}: neutrino 
+    \item \colorbox{armygreen!70}{$G(\mathbf v')$}: electron lepton number of neutrinos $\sqrt{2}G_{\mathrm F} \int_0^\infty \frac{E^2 dE}{2\pi^2} \left( n_{\nu_{\mathrm e}} - n_{\bar\nu_{\mathrm e}} \right)$
+\end{itemize}
+
+
 
 \end{frame}
 
 \begin{frame}{Dispersion Relation}
 
+\begin{tcolorbox}[standard jigsaw, opacityback=0]
+    \color{white}
+    Collective mode of off-diagonal element
 \begin{equation*}
-   \operatorname{Det}(\omega + N^{\nu}_{\phantom{\mu}\nu}) = 0,
+    \epsilon \to \tilde \epsilon e^{-i(\Omega t - \boldsymbol{ K}\cdot \boldsymbol{r} )}
 \end{equation*}
+\end{tcolorbox}
+
+\pause
+
+Replacement:
+\begin{itemize}
+    \item $\epsilon \to \tilde \epsilon$
+    \item $\partial_t \to -i\Omega$, $\nabla_{\boldsymbol{r}}\to i \boldsymbol{K}$
+\end{itemize}
+
+\pause
+
+\begin{tcolorbox}[standard jigsaw, opacityback=0]
+    \color{white}
+Collective mode
+
+\only<3>{
+\begin{equation*}
+    v^\mu (K_\mu -( \Lambda + \Phi )_\mu ) \tilde\epsilon (\boldsymbol{v} ) = - \int d\Gamma' v^\mu v'_\mu G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}')
+\end{equation*}
+}
+
+\only<4>{
+\begin{equation*}
+    v^\mu \colorbox{red!50}{$\left( K_\mu -( \Lambda + \Phi )_\mu \right)$} \tilde\epsilon (\boldsymbol{v} ) = - \int d\Gamma' v^\mu v'_\mu G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}')
+\end{equation*}
+}
+
+\only<5>{
+\begin{equation*}
+    v^\mu \colorbox{red!50}{$K_\mu$} \tilde\epsilon (\boldsymbol{v} ) = - \int d\Gamma' v^\mu v'_\mu G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}')
+\end{equation*}
+}
+
+with \colorbox{red!50}{$K_\mu \to ( \Omega, \boldsymbol{K} )$}
+
+\end{tcolorbox}
+
+Without neutrino self-interaction: $v^\mu K_\mu = 0$
+
+\end{frame}
+
+\begin{frame}{Dispersion Relation}
+
+\only<3>{
+\begin{textblock*}{80pt}(200pt,5pt)
+ 
+    % \begin{tcolorbox}[standard jigaw, opacityback=0]
+        \begin{equation*}
+            \color{white}
+            v^\mu K_\mu \tilde\epsilon (\boldsymbol{v} ) = - \int d\Gamma' v^\mu v'_\mu G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}')
+        \end{equation*}
+    % \end{tcolorbox}
+\end{textblock*}
+}
+
+% \begin{tcolorbox}[standard jigsaw, opacityback=0]
+%     \color{white}
+% \begin{equation*}
+%     v^\mu K_\mu \tilde\epsilon (\boldsymbol{v} ) = \cancel{- \int d\Gamma' v^\mu v'_\mu G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}') } = 0
+% \end{equation*}
+% \end{tcolorbox}
+
+Rewrite 
+\begin{align*}
+    &- \int d\Gamma' \colorbox{red!50}{$v^\mu$} v'_\mu G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}') \\
+    =& \colorbox{red!50}{$v^\mu$} \colorbox{blue!50}{$\left(- \int d\Gamma'  v'_\mu G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}') \right)$} \\
+    \equiv&  v^\mu \colorbox{blue!50}{$a_\mu$}
+\end{align*}
+
+\pause
+
+EoM
+
+
+\begin{equation*}
+    v^\mu K_\mu \tilde \epsilon (\boldsymbol{v}) = v^\mu a_\mu
+\end{equation*}
+\pause
+{\centering
+$\Longrightarrow$
+\begin{equation*}
+    \tilde \epsilon (\boldsymbol{v}) = v^\mu a_\mu/v^\mu K_\mu 
+\end{equation*}
+}
+Collect all terms of $a_\mu$
+
+\begin{equation*}
+    v^\mu \left( \delta_\mu^\nu +  \int d\Gamma' \frac{ G(\boldsymbol{ v}') v'_\mu v^\nu }{ v^\alpha K_\alpha }   \right) a_\nu = 0
+\end{equation*}
+
+\end{frame}
+
+
+\begin{frame}{Dispersion Relation}
+
+% \begin{textblock*}{100pt}(250pt,5pt)
+% \begin{equation*}
+%     \tilde \epsilon (\boldsymbol{v}) = v^\mu a_\mu/v^\mu K_\mu 
+% \end{equation*}
+% \end{textblock*}
+
+\begin{tcolorbox}[standard jigsaw, opacityback=0]
+    \color{white}
+$v^\alpha K_\alpha = \Omega (1 - n \cos \theta)$ where $n = \lvert \boldsymbol{K} \rvert / \Omega $
+\end{tcolorbox}
+
+\begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+Nontrivial solutions to EoM requires
+\only<1>{
+\begin{equation*}
+    v^\mu \left( \Omega I + N^\nu_{\phantom{\nu}\mu} \right) a_\nu =0
+\end{equation*}
+}
+\only<2->{
+\begin{equation*}
+    v^\mu \colorbox{blue!50}{$\left( \Omega I + N^\nu_{\phantom{\nu}\mu} \right) a_\nu$} =0
+\end{equation*}
+}
+
+\only<3->{
+    \centering
+    $\Rightarrow$
+    \begin{equation*}
+    \left( \Omega I + N^\nu_\mu \right) a_\nu =0
+    \end{equation*}    
+}
+
+\only<4->{
+    \centering
+    $\Rightarrow$
+\begin{equation*}
+   \operatorname{Det}\left(\omega I + N^{\nu}_{\phantom{\nu}\mu}\right) = 0,
+\end{equation*}
+}
+
+
+\end{column}
+
+\begin{column}{0.5\textwidth}
+
+
 
 
    \begin{equation*}
@@ -2000,51 +2206,96 @@ Identify the condition for complex eigenvalues
    \end{equation*}
 
 
-\only<1>{
+
 
    \begin{equation*}
-      N^\mu_{\phantom{\mu}\nu} = \omega P^\mu_{\phantom{\mu}\nu}\to  \begin{pmatrix}
+      N^\mu_{\phantom{\mu}\nu} =
+   \end{equation*}
+\begin{equation*}
+    \small
+  \begin{pmatrix}
    \frac{1}{2}  I_0 & 0 & 0 & -\frac{1}{2}I_1\\
    0 & -\frac{1}{4}(I_0-I_2) & 0 & 0\\
    0 & 0 & -\frac{1}{4}(I_0-I_2) & 0 \\
    \frac{1}{2}I_1 & 0 & 0 & -\frac{1}{2}I_2
    \end{pmatrix}
    \end{equation*}
-   }
 
 
-\only<2>{
-   \begin{tcolorbox}[title=Solutions]
+
+
+
+\end{column}
+
+\end{columns}
+
+\pause
+
+   \begin{tcolorbox}
+    \vspace{-0.8em}
    \begin{equation*}
    \omega = \frac{1}{4}(I_0-I_2), \quad -\frac{1}{4}\left(I_0-I_2\pm \sqrt{ (I_0-2I_1+I_2)(I_0+2I_1+I_2) }\right)
    \end{equation*}
    \end{tcolorbox}
-}
 
 \end{frame}
 
 
 \begin{frame}{Dispersion Relation}
 
+    \begin{textblock*}{100pt}(230pt,5pt)
+        \begin{equation*}
+            a_\mu = -\int d\Gamma' v'_{\mu} G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}')
+        \end{equation*}
+    \end{textblock*}
 
 
-   \begin{columns}[T]
+    \begin{tcolorbox}
+        \vspace{-0.8em}
+        \begin{equation*}
+       \omega =\colorbox{red!50}{$\frac{1}{4}(I_0-I_2)$}, \quad \colorbox{blue!50}{$-\frac{1}{4}\left(I_0-I_2\pm \sqrt{ (I_0-2I_1+I_2)(I_0+2I_1+I_2) }\right)$}
+        \end{equation*}
+        \end{tcolorbox}
+\begin{itemize}
+    \item \colorbox{red!50}{$\frac{1}{4}(I_0-I_2)$}: MAA solution
+    \item \colorbox{blue!50}{$-\frac{1}{4}\left(I_0-I_2\pm \sqrt{ (I_0-2I_1+I_2)(I_0+2I_1+I_2) }\right)$}: MZA solution 
+\end{itemize}
 
-\begin{column}{0.5\textwidth}
-   \begin{figure}
-     \includegraphics[width=\linewidth]{assets/dr/spectDBWC1DRDBMAAPltBlob.pdf}
-     \caption*{MAA solutions}
-  \end{figure}
-\end{column}
+\end{frame}
 
-\begin{column}{0.5\textwidth}
-   \begin{figure}
-      \includegraphics[width=\linewidth]{assets/dr/spectDBWC1DRDBMZAPltBlob.pdf}
-      \caption*{ MZA solutions}
-   \end{figure}
-\end{column}
+\begin{frame}{Dispersion Relation}
 
-   \end{columns}
+
+    \begin{textblock*}{100pt}(230pt,10pt)
+        Izaguirre et al, 2017
+    \end{textblock*}
+    
+\begin{figure}
+    \begin{tcolorbox}
+        \color{white}
+    \centering
+    \includegraphics[width=0.8\textwidth]{assets/dr/dr-two-beams.png}
+    \end{tcolorbox}
+
+\end{figure}
+
+%    \begin{columns}[T]
+
+% \begin{column}{0.5\textwidth}
+%    \begin{figure}
+%      \includegraphics[width=\linewidth]{assets/dr/spectDBWC1DRDBMAAPltBlob.pdf}
+%      \caption*{MAA solutions}
+%   \end{figure}
+% \end{column}
+
+% \begin{column}{0.5\textwidth}
+%    \begin{figure}
+%       \includegraphics[width=\linewidth]{assets/dr/spectDBWC1DRDBMZAPltBlob.pdf}
+%       \caption*{ MZA solutions}
+%    \end{figure}
+% \end{column}
+
+%    \end{columns}
 
 \begin{tcolorbox}
    \centering
@@ -2086,49 +2337,53 @@ Identify the condition for complex eigenvalues
 
 \begin{frame}{Dispersion Relations}
 
+    
    \begin{figure}
       \minipage{0.49\textwidth}
         \includegraphics[width=\linewidth]{assets/dr/spectGarchingPlt.pdf}
+        \caption*{Spectrum $G(u)$, where $u=\cos\theta$}
       \endminipage\hfill
       \minipage{0.49\textwidth}
       \includegraphics[width=\linewidth]{assets/dr/spectGarchingDRLSAPltBlob.pdf}
+      \caption*{ MAA: red; MZA: blue and green }
       \endminipage\hfill
-      \caption*{Dispersion relation and linear stability analysis (right panel) for a spectrum constructed from Garching 1D simulation data (left panel). Solid red line is dispersion relation for MAA solution while blue and green lines are for MZA solutions. Light red (green and green) blob is instability for MAA (MZA) solution.
-       }
+    %   \caption*{Dispersion relation and linear stability analysis (right panel) for a spectrum constructed from Garching 1D simulation data (left panel). Solid red line is dispersion relation for MAA solution while blue and green lines are for MZA solutions. Light red (blue and green) blob is instability for MAA (MZA) solution.
+    %    }
    \end{figure}
 
 
 \end{frame}
 
-\begin{frame}{Dispersion Relations}
 
-\begin{equation*}
-   k = \frac{1}{4} \int \mathrm du G(u) \frac{ 1 - u^2 }{ \omega/k - u }.
-   \label{eqn-k-omega-relation}
-\end{equation*}
-
-
-\begin{align*}
-\operatorname{Re}(k) =& \frac{1}{4}\left(  \mathcal{P} \int \mathrm d u G(u) \frac{ 1 - u^2 }{ - u }  \right)\label{eqn-re-k-arbitrary-spectrum} \\
-\operatorname{Im}(k) =&  \frac{\pi}{4}G(0) \operatorname{Sign}\left( \omega \right) \operatorname{Sign}\left(  \operatorname{Im}(k)  \right).
-\end{align*}
-
-\begin{equation*}
-   \lvert \operatorname{Im}(k) \rvert  =  \frac{\pi}{4}\lvert G(0)\rvert .
-\end{equation*}
-
-
-
-\begin{align*}
-&\left(4\operatorname{Re}(k) - \mathcal P \int \frac{G(u)}{u} \mathrm d u + U_1 \right)^2  - \left( \operatorname{Sign}(\omega \operatorname{Im}(k) )\pi G(0) +4 \operatorname{Im}(k) \right)^2 \\
-=& - \left( \mathcal P \int \frac{G(u)}{u} \mathrm du + U_1 \right) \pi \operatorname{Sign}(\omega \operatorname{Im}(k) ) G(0),
-\end{align*}
+% \begin{frame}{Dispersion Relations}
 
 % \begin{equation*}
-%    \operatorname{Im}(k) = - \frac{1}{4} \pi G(0) \operatorname{Sign}(\omega \operatorname{Im}(k) ) \left(  1 \pm \frac{ \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }{ 4 \operatorname{Re}(k) - \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }  \right)
+%    k = \frac{1}{4} \int \mathrm du G(u) \frac{ 1 - u^2 }{ \omega/k - u }.
+%    \label{eqn-k-omega-relation}
 % \end{equation*}
 
-\end{frame}
+
+% \begin{align*}
+% \operatorname{Re}(k) =& \frac{1}{4}\left(  \mathcal{P} \int \mathrm d u G(u) \frac{ 1 - u^2 }{ - u }  \right)\label{eqn-re-k-arbitrary-spectrum} \\
+% \operatorname{Im}(k) =&  \frac{\pi}{4}G(0) \operatorname{Sign}\left( \omega \right) \operatorname{Sign}\left(  \operatorname{Im}(k)  \right).
+% \end{align*}
+
+% \begin{equation*}
+%    \lvert \operatorname{Im}(k) \rvert  =  \frac{\pi}{4}\lvert G(0)\rvert .
+% \end{equation*}
+
+
+
+% \begin{align*}
+% &\left(4\operatorname{Re}(k) - \mathcal P \int \frac{G(u)}{u} \mathrm d u + U_1 \right)^2  - \left( \operatorname{Sign}(\omega \operatorname{Im}(k) )\pi G(0) +4 \operatorname{Im}(k) \right)^2 \\
+% =& - \left( \mathcal P \int \frac{G(u)}{u} \mathrm du + U_1 \right) \pi \operatorname{Sign}(\omega \operatorname{Im}(k) ) G(0),
+% \end{align*}
+
+% % \begin{equation*}
+% %    \operatorname{Im}(k) = - \frac{1}{4} \pi G(0) \operatorname{Sign}(\omega \operatorname{Im}(k) ) \left(  1 \pm \frac{ \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }{ 4 \operatorname{Re}(k) - \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }  \right)
+% % \end{equation*}
+
+% \end{frame}
 
 
 
@@ -2137,12 +2392,14 @@ Identify the condition for complex eigenvalues
    \begin{figure}
       \minipage{0.49\textwidth}
       \includegraphics[width=\linewidth]{assets/dr/spectBoxC1MAADRPltBlob.pdf}
+      \caption*{MAA solution}
       \endminipage\hfill
       \minipage{0.49\textwidth}
       \includegraphics[width=\linewidth]{assets/dr/spectBoxC1MZADRPltBlob.pdf}
+      \caption*{MZA solution}
       \endminipage\hfill
-      \caption*{Dispersion relation and linear stability analysis for box spectrum. The box spectrum is defined to be $-0.1$ within range $u\in [-1,-0.3)$ and $1$ within range $u\in [-0.3,1]$. Left panel shows the dispersion relation and the complex $k$ for real $\omega$ for MAA solution. Right panel is the corresponding result for MZA solution. Dash-dotted gray lines are $\omega= \pm k$ which sets the boundaries of the forbidden region for dispersion relation.
-       }
+    %   \caption*{Dispersion relation and linear stability analysis for box spectrum. The box spectrum is defined to be $-0.1$ within range $u\in [-1,-0.3)$ and $1$ within range $u\in [-0.3,1]$. Left panel shows the dispersion relation and the complex $k$ for real $\omega$ for MAA solution. Right panel is the corresponding result for MZA solution. Dash-dotted gray lines are $\omega= \pm k$ which sets the boundaries of the forbidden region for dispersion relation.
+    %    }
    \end{figure}
 
 
@@ -2207,44 +2464,18 @@ Supported by DOE EPSCoR grant \#DE-SC0008142 at UNM.
     \begin{frame}[label=citations]{Citations}
       \framesubtitle{\TeX, \LaTeX, and Beamer}
 
-      \justifying\TeX\ is a programming language for the typesetting
-      of documents. It was created by Donald Erwin Knuth in the late
-      1970s and it is documented in \emph{The \TeX
-      book}~\cite{knuth84}.
-
-      In the early 1980s, Leslie Lamport created the initial version
-      of \LaTeX, a high-level language on top of \TeX, which is
-      documented in \emph{\LaTeX : A Document Preparation
-      System}~\cite{lamport94}. There exists a healthy ecosystem of
-      packages that extend the base functionality of \LaTeX;
-      \emph{The \LaTeX\ Companion}~\cite{MG94} acts as a guide
-      through the ecosystem.
-
-      In 2003, Till Tantau created the initial version of Beamer, a
-      \LaTeX\ package for the creation of presentations. Beamer is
-      documented in the \emph{User's Guide to the Beamer
-      Class}~\cite{tantau04}.
+      
     \end{frame}
 
     \begin{frame}[label=bibliography]{Bibliography}
       \framesubtitle{\TeX, \LaTeX, and Beamer}
       \begin{thebibliography}{9}
+        \bibitem{Izaguirre2017}
+            Izaguirre, I., Raffelt, G., and Tamborra, I. (2017). \emph{Fast Pairwise Conversion of Supernova Neutrinos: A Dispersion Relation Approach.} Physical Review Letters, 118(2), 021101. 
         \bibitem{knuth84}
             Donald~E.~Knuth.
             \emph{The \TeX book}.
             Addison-Wesley, 1984.
-        \bibitem{lamport94}
-            Leslie~Lamport.
-            \emph{\LaTeX : A Document Preparation System}.
-            Addison-Wesley, 1986.
-        \bibitem{MG94}
-            M.~Goossens, F.~Mittelbach, and A.~Samarin.
-            \emph{The \LaTeX\ Companion}.
-            Addison-Wesley, 1994.
-        \bibitem{tantau04}
-            Till~Tantau.
-            \emph{User's Guide to the Beamer Class Version 3.01}.
-            Available at \url{http://latex-beamer.sourceforge.net}.
         \bibitem{MS05}
             A.~Mertz and W.~Slough.
             Edited by B.~Beeton and K.~Berry.
