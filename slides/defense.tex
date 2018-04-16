@@ -2365,6 +2365,52 @@ Nontrivial solutions to EoM requires
 
 \end{frame}
 
+\begin{frame}{Dispersion Relations}
+
+Solve $k$ for MAA solutions
+\begin{equation*}
+   1 = \frac{1}{4k} \int \mathrm du G(u) \frac{ 1 - u^2 }{ \omega/k - u }.
+\end{equation*}
+around  $\omega\to 0$.
+
+\pause
+
+Apply Stokhotski-Plemelj theorem
+\begin{align*}
+\operatorname{Re}(k) =& \frac{1}{4}\left(  \mathcal{P} \int \mathrm d u G(u) \frac{ 1 - u^2 }{ - u }  \right)\label{eqn-re-k-arbitrary-spectrum} \\
+\operatorname{Im}(k) =&  \frac{\pi}{4}G(0) \operatorname{Sign}\left( \omega \right) \operatorname{Sign}\left(  \operatorname{Im}(k)  \right).
+\end{align*}
+
+\pause
+
+\begin{itemize}
+   \item $G(0) \operatorname{Sign}(\omega) > 0$: $\lvert \operatorname{Im}(k) \rvert  =  \frac{\pi}{4}\lvert G(0)\rvert$
+   \item $G(0) \operatorname{Sign}(\omega) < 0$: $\lvert \operatorname{Im}(k) \rvert  = 0$
+\end{itemize}
+
+\pause
+\begin{tcolorbox}
+   Gap between dispersion relation and $\omega=0$
+\end{tcolorbox}
+
+
+% \begin{frame}{Dispersion Relation}
+% For MZA solutions
+%
+%
+% \end{frame}
+
+
+% \begin{align*}
+% &\left(4\operatorname{Re}(k) - \mathcal P \int \frac{G(u)}{u} \mathrm d u + U_1 \right)^2  - \left( \operatorname{Sign}(\omega \operatorname{Im}(k) )\pi G(0) +4 \operatorname{Im}(k) \right)^2 \\
+% =& - \left( \mathcal P \int \frac{G(u)}{u} \mathrm du + U_1 \right) \pi \operatorname{Sign}(\omega \operatorname{Im}(k) ) G(0),
+% \end{align*}
+
+% \begin{equation*}
+%    \operatorname{Im}(k) = - \frac{1}{4} \pi G(0) \operatorname{Sign}(\omega \operatorname{Im}(k) ) \left(  1 \pm \frac{ \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }{ 4 \operatorname{Re}(k) - \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }  \right)
+% \end{equation*}
+
+\end{frame}
 
 \begin{frame}{Dispersion Relations}
 
@@ -2390,35 +2436,6 @@ Nontrivial solutions to EoM requires
 \end{frame}
 
 
-% \begin{frame}{Dispersion Relations}
-
-% \begin{equation*}
-%    k = \frac{1}{4} \int \mathrm du G(u) \frac{ 1 - u^2 }{ \omega/k - u }.
-%    \label{eqn-k-omega-relation}
-% \end{equation*}
-
-
-% \begin{align*}
-% \operatorname{Re}(k) =& \frac{1}{4}\left(  \mathcal{P} \int \mathrm d u G(u) \frac{ 1 - u^2 }{ - u }  \right)\label{eqn-re-k-arbitrary-spectrum} \\
-% \operatorname{Im}(k) =&  \frac{\pi}{4}G(0) \operatorname{Sign}\left( \omega \right) \operatorname{Sign}\left(  \operatorname{Im}(k)  \right).
-% \end{align*}
-
-% \begin{equation*}
-%    \lvert \operatorname{Im}(k) \rvert  =  \frac{\pi}{4}\lvert G(0)\rvert .
-% \end{equation*}
-
-
-
-% \begin{align*}
-% &\left(4\operatorname{Re}(k) - \mathcal P \int \frac{G(u)}{u} \mathrm d u + U_1 \right)^2  - \left( \operatorname{Sign}(\omega \operatorname{Im}(k) )\pi G(0) +4 \operatorname{Im}(k) \right)^2 \\
-% =& - \left( \mathcal P \int \frac{G(u)}{u} \mathrm du + U_1 \right) \pi \operatorname{Sign}(\omega \operatorname{Im}(k) ) G(0),
-% \end{align*}
-
-% % \begin{equation*}
-% %    \operatorname{Im}(k) = - \frac{1}{4} \pi G(0) \operatorname{Sign}(\omega \operatorname{Im}(k) ) \left(  1 \pm \frac{ \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }{ 4 \operatorname{Re}(k) - \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }  \right)
-% % \end{equation*}
-
-% \end{frame}
 
 
 
