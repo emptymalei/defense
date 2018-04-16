@@ -148,7 +148,7 @@ Flavor states are different from mass states.
 
 
 
-\begin{tcolorbox}[title=Equation of Motion]
+\begin{tcolorbox}[title=Equation of Motion, standard jigsaw, opacityback=0, coltext=white]
 
 \begin{equation*}
 i\partial_x \begin{pmatrix}
@@ -164,18 +164,18 @@ i\partial_x \begin{pmatrix}
 
 \pause
 
-\begin{tcolorbox}
+\begin{tcolorbox}[standard jigsaw, opacityback=0,coltext=white]
 \begin{equation*}
 \mathbf{H} = \frac{\omega_{\mathrm v} }{2}\left( - \cos 2\theta_{\mathrm v } \boldsymbol{\sigma}_3  + \sin 2\theta_{\mathrm{v}} \boldsymbol{\sigma}_1\ \right)
 \end{equation*}
 
 
 \begin{itemize}
-    \item \color{black} Oscillation frequency:
+    \item  Oscillation frequency:
 \begin{equation*}
     \omega_{\mathrm v} = \frac{\delta m^2}{2E}=\frac{m_2^2 - m_1^2}{2E}
 \end{equation*}
-\item \color{black} Mixing angle $\theta_{\mathrm v}$
+\item  Mixing angle $\theta_{\mathrm v}$
 \end{itemize}
 
 
@@ -229,13 +229,13 @@ Equation of motion
 \end{column}%
 \begin{column}{0.5\textwidth}
 
-\begin{tcolorbox}
+% \begin{tcolorbox}
 \begin{figure}
     \centering
     % \vspace*{-10pt}
     \includegraphics[width=\textwidth]{assets/flavor-isospin-illus}
 \end{figure}
-\end{tcolorbox}
+% \end{tcolorbox}
 
 \end{column}
 \end{columns}
@@ -266,13 +266,13 @@ Vacuum oscillation Hamiltonian
 \end{column}%
 \begin{column}{0.5\textwidth}
 
-\begin{tcolorbox}
+% \begin{tcolorbox}
 \begin{figure}
     \centering
     % \vspace*{-20pt}
     \includegraphics[width=0.7\textwidth]{assets/flavor-isospin-1}
 \end{figure}
-\end{tcolorbox}
+% \end{tcolorbox}
 
 
 
@@ -303,23 +303,26 @@ Vacuum oscillation Hamiltonian
 % SHOULD ADD IN WHY MATTER INTERACTION IS LIKE THIS.
 % \end{tcolorbox}
 
-\begin{tcolorbox}
-\begin{figure}[ht]
+
+
+\begin{tcolorbox}[sidebyside]
+% \begin{figure}[ht]
 \centering
-\begin{minipage}[b]{0.45\linewidth}
+% \begin{minipage}[b]{0.45\linewidth}
 \centering
 \includegraphics[height=0.32\textheight]{assets/neutral-current.png}
-\caption*{\color{black}Neutral current interaction between $\nu_{\mathrm e}$, $\nu_{\mu}$, $\nu_{\tau}$,
-and $e^{-}$, etc.}
-\end{minipage}%
-\begin{minipage}[b]{0.45\linewidth}
+
+\color{black}Neutral current interaction between $\nu_{\mathrm e}$, $\nu_{\mu}$, $\nu_{\tau}$,
+and $e^{-}$.
+% \end{minipage}%
+\tcblower
+% \begin{minipage}[b]{0.45\linewidth}
 \centering
 \includegraphics[height=0.32\textheight]{assets/charged-current.png}
-\caption*{
-\color{black}Charged current interaction between $\nu_{\mathrm e}$ and $e^{-}$}
-\end{minipage}
-\end{figure}
 
+\color{black}Charged current interaction between $\nu_{\mathrm e}$ and $e^{-}$
+% \end{minipage}
+% \end{figure}
 \end{tcolorbox}
 
 
@@ -366,7 +369,7 @@ and $e^{-}$, etc.}
 
 
 \begin{itemize}
-    \item[] Hamiltonian with matter interaction in flavor basis  ($\omega_{\mathrm{v}}=\delta m^2/2E$):
+    \item[] Hamiltonian with matter interaction in flavor basis  ($\omega_{\mathrm{v}}=\delta m^2 \big/ 2E$):
         \tikz[na] \node[coordinate] (n1) {};
 \end{itemize}
 
@@ -795,7 +798,8 @@ Astrophysical environments: supernovae, accretion disks etc
 
 \only<1>{
 \centering
-Transition probabilities between mass states in matter.
+Transition probabilities between mass states in matter.\newline
+
 }
 
 \only<2>{
@@ -1130,7 +1134,7 @@ Matter potential frequency
 % }
 % \end{textblock*}
 
-\begin{tcolorbox}
+\begin{tcolorbox}[colback=white]
 \begin{figure}
 \includegraphics[width=0.9\textwidth]{assets/rabiOscillationsNeutrinoCoincidence-single-frequency}
 %stimulated-neutrino-oscillations-kneller.png}
@@ -1314,7 +1318,7 @@ Consider Rabi oscillation with two driving frequencies $k_1=n_1 k$, $k_2=n_2 k$
     \end{pmatrix}$}
 \end{equation*}
 
-Corotating frame of the second potential,
+Corotating frame of the second potential
 
 
 
@@ -1383,7 +1387,7 @@ D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{
 
 \begin{figure}
 \includegraphics[width=0.9\textwidth]{assets/interference-reduction}
-\caption*{Grid lines: amplitude predicted using $1/(1+D'^2)$
+\caption*{$A_1=10^{-4}\omega_{\mathrm m}$, $k_1= \omega_{\mathrm m}$; Grid lines: amplitude predicted using $1/(1+D'^2)$
 }
 \end{figure}
 
@@ -1393,7 +1397,7 @@ D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{
 \vspace{-15pt}
 \begin{center}
     \begin{tabular}{c|c|c|c}
-    \multicolumn{4}{c}{ $\alpha_2$, $k_1$ values} \\
+    \multicolumn{4}{c}{ $\alpha_2$, $k_2$ values} \\
     \hline
        Dashed  &  dotted & dash-dotted & solid \\
        $10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  &  $10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$  & $5.0\times 10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  & $5\times 10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$
@@ -1691,12 +1695,12 @@ Resonance condition
       Interaction Hamiltonian $\mathbf H_{\nu\nu}$
 
       \begin{equation*}
-         \sqrt{2}G_{\mathrm F} (1- \hat p \cdot \hat p') \rho( \mathbf p' )
+         \sqrt{2}G_{\mathrm F} n(\boldsymbol{ p}') (1- \hat{\boldsymbol{p}} \cdot \hat{\boldsymbol{p}}') \rho( \boldsymbol{p}' )
       \end{equation*}
 
       In Flavor Isospin space
       \begin{equation*}
-         -2\sqrt{2}G_{\mathrm F} (1- \hat p \cdot \hat p') n(\mathbf p') \vec s ( \mathbf p' )
+         -2\sqrt{2}G_{\mathrm F} n(\boldsymbol{p}') (1- \hat{ \boldsymbol{p} } \cdot \hat{\boldsymbol{p} }')  \vec s ( \boldsymbol{p}' )
       \end{equation*}
 
       % \only<2>{
@@ -1738,10 +1742,10 @@ Resonance condition
 \begin{column}{0.3\textwidth}
 
 \begin{itemize}
-   \item $H_v = - \eta \frac{1}{2}\omega \sigma_3 $
+   \item $H_v = - \frac{1}{2}\omega \sigma_3 $
    \item $H_m = \frac{1}{2}\lambda \sigma_3$
-   \item $H_{\nu\nu,2} = \frac{1}{2}\mu_1 \rho_1 \xi $
-   \item $H_{\nu\nu,1} = \frac{1}{2}\mu_2 \rho_2 \xi$
+   \item $H_{\nu\nu,2} = \frac{1}{2}\mu_1 \rho_1$
+   \item $H_{\nu\nu,1} = \frac{1}{2}\mu_2 \rho_2$
 \end{itemize}
 where
 \begin{equation*}
@@ -1826,13 +1830,13 @@ Geometric factor
 \begin{frame}{Neutrino Self-interactions}
 
 
-   \begin{tcolorbox}[title=Characteristic Length Scales,standard jigsaw,
+   \begin{tcolorbox}[title=Characteristic Energy Scales,standard jigsaw,
     opacityback=0]
 
       \begin{itemize}
-         \item  $\omega_{\mathrm v} = \delta m^2/2E $
-         \item  $\lambda \sim G_{\mathrm F} n_e$
-         \item  $\mu \sim G_{\mathrm F} (1-\mathbf p_1 \cdot \mathbf p_2) n_{\nu} $
+         \item  $\omega_{\mathrm v} = \delta m^2\big/2E $
+         \item  $\lambda \sim G_{\mathrm F} n_{\mathrm e}$
+         \item  $\mu \sim G_{\mathrm F} (1- \hat{\boldsymbol{ v} }_1 \cdot \hat{\boldsymbol{v}}_2) n_{\nu} $
       \end{itemize}
 
    \end{tcolorbox}
@@ -1844,7 +1848,7 @@ Geometric factor
 Vacuum oscillation oscillation frequencies
    \begin{align*}
       \omega_{\mathrm v} = \frac{\Delta m^2}{2E}  \sim& \frac{2\pi}{ 1  \mathrm{km} }  \left(\frac{\Delta m^2_{32}}{2.5\times 10^{-3} \mathrm{eV}^2 } \right) \left( \frac{1MeV}{E} \right) \\
-   \sim & \frac{2\pi}{ 33  \mathrm{km} } \left( \frac{\delta m_{12}^2}{7.5\times 10^{-5}\mathrm{eV}^2} \right) \left( \frac{1\mathrm{MeV}}{E} \right)
+   \sim & \frac{2\pi}{ 33  \mathrm{km} } \left( \frac{\Delta m_{12}^2}{7.5\times 10^{-5}\mathrm{eV}^2} \right) \left( \frac{1\mathrm{MeV}}{E} \right)
    \end{align*}
 }
 
@@ -1892,15 +1896,16 @@ Suppose we have neutrino flux $10^{50}\mathrm{ergs\cdot s^{-1}}$. We estimate th
 
 
 
-      \begin{column}{0.6\textwidth}
+      \begin{column}{0.55\textwidth}
       \begin{figure}
-         \includegraphics[width=\textwidth]{assets/two-beams-model}
+         \includegraphics[width=\textwidth]{assets/two-beams-model-sym}
       \end{figure}
       \end{column}
 
-\begin{column}{0.4\textwidth}
+\begin{column}{0.45\textwidth}
 
-$\rho_1$: neutrinos; $\rho_2$: antineutrinos
+$\rho_1$: neutrinos; \newline
+$\rho_2$: antineutrinos
    \begin{equation*}
    i \partial_z \rho_i = \left[ H_i, \rho_i \right]
    \end{equation*}
@@ -1920,7 +1925,7 @@ $\rho_1$: neutrinos; $\rho_2$: antineutrinos
 
 \pause
 
-
+\small
 \begin{equation*}
 i\partial_{z}\begin{pmatrix}
 \epsilon_1 \\
@@ -1946,6 +1951,18 @@ i\partial_{z}\begin{pmatrix}
 
 
 \begin{frame}{Linear Stability Analysis}
+
+
+Solution of the form
+\begin{equation*}
+   \begin{pmatrix}
+      \epsilon_1(z)\\
+      \epsilon_2(z)
+   \end{pmatrix} = \begin{pmatrix}
+      \epsilon_1(0)\\
+      \epsilon_2(0)
+   \end{pmatrix} e^{i K_z z}
+\end{equation*}
 
 
 Eigenvalues or collective oscillation frequencies
@@ -1982,7 +1999,7 @@ Identify the condition for complex eigenvalues
     \begin{equation*}
         \left( \Omega, K_x, K_y, K_z \right)
     \end{equation*}
-    
+
  \end{tcolorbox}
 \end{frame}
 
@@ -1994,7 +2011,7 @@ Identify the condition for complex eigenvalues
 %         \centering
 %         Continuous emission angles?
 %      \end{tcolorbox}
-     
+
 % \end{frame}
 
 \subsection{Dispersion Relation}
@@ -2006,14 +2023,14 @@ Identify the condition for complex eigenvalues
         \color{white}
         Izaguirre, I., Raffelt, G., \& Tamborra, I. (2017). \emph{Fast Pairwise Conversion of Supernova Neutrinos: A Dispersion Relation Approach}. Physical Review Letters, 118(2), 021101.
     \end{tcolorbox}
-    
+
     % \pause
-    
+
     \begin{itemize}[<+->]
         \item Linear stability analysis $\rightarrow$ dispersion relation for $\Omega$ and $\mathbf K$.
         \item Instabilities occur in dispersion relation gaps.
     \end{itemize}
-    
+
     \end{frame}
 
 
@@ -2040,7 +2057,7 @@ Equation of motion for off-diagonal element of density matrix (Izaguirre et al, 
 \begin{itemize}
     \item \colorbox{blue!50}{$ v^\mu$}:  four-velocity of neutrinos $(1, \boldsymbol v) $
     \item \colorbox{red!50}{$\Lambda$}: matter contribution $( \sqrt{2}G_{\mathrm F} n_{\mathrm e}, \sqrt{2}G_F n_e \boldsymbol v_{\mathrm e} )$
-    \item \colorbox{ao!60}{$\Phi$}: neutrino 
+    \item \colorbox{ao!60}{$\Phi$}: neutrino
     \item \colorbox{armygreen!70}{$G(\mathbf v')$}: electron lepton number of neutrinos $\sqrt{2}G_{\mathrm F} \int_0^\infty \frac{E^2 dE}{2\pi^2} \left( n_{\nu_{\mathrm e}} - n_{\bar\nu_{\mathrm e}} \right)$
 \end{itemize}
 
@@ -2082,19 +2099,23 @@ Collective mode
 \begin{equation*}
     v^\mu \colorbox{red!50}{$\left( K_\mu -( \Lambda + \Phi )_\mu \right)$} \tilde\epsilon (\boldsymbol{v} ) = - \int d\Gamma' v^\mu v'_\mu G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}')
 \end{equation*}
-}
-
-\only<5>{
-\begin{equation*}
-    v^\mu \colorbox{red!50}{$K_\mu$} \tilde\epsilon (\boldsymbol{v} ) = - \int d\Gamma' v^\mu v'_\mu G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}')
-\end{equation*}
-}
-
 with \colorbox{red!50}{$K_\mu \to ( \Omega, \boldsymbol{K} )$}
+}
+
+\only<5->{
+\begin{equation*}
+    v^\mu \colorbox{red!50}{$k_\mu$} \tilde\epsilon (\boldsymbol{v} ) = - \int d\Gamma' v^\mu v'_\mu G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}')
+\end{equation*}
+with \colorbox{red!50}{$k_\mu \to ( \omega, \boldsymbol{k} )$}
+}
+
+
 
 \end{tcolorbox}
 
+\only<6>{
 Without neutrino self-interaction: $v^\mu K_\mu = 0$
+}
 
 \end{frame}
 
@@ -2102,8 +2123,8 @@ Without neutrino self-interaction: $v^\mu K_\mu = 0$
 
 \only<3>{
 \begin{textblock*}{80pt}(200pt,5pt)
- 
-    % \begin{tcolorbox}[standard jigaw, opacityback=0]
+
+    % \begin{tcolorbox}[standard jigsaw, opacityback=0]
         \begin{equation*}
             \color{white}
             v^\mu K_\mu \tilde\epsilon (\boldsymbol{v} ) = - \int d\Gamma' v^\mu v'_\mu G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}')
@@ -2119,7 +2140,7 @@ Without neutrino self-interaction: $v^\mu K_\mu = 0$
 % \end{equation*}
 % \end{tcolorbox}
 
-Rewrite 
+Rewrite
 \begin{align*}
     &- \int d\Gamma' \colorbox{red!50}{$v^\mu$} v'_\mu G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}') \\
     =& \colorbox{red!50}{$v^\mu$} \colorbox{blue!50}{$\left(- \int d\Gamma'  v'_\mu G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}') \right)$} \\
@@ -2138,7 +2159,7 @@ EoM
 {\centering
 $\Longrightarrow$
 \begin{equation*}
-    \tilde \epsilon (\boldsymbol{v}) = v^\mu a_\mu/v^\mu K_\mu 
+    \tilde \epsilon (\boldsymbol{v}) = v^\mu a_\mu/v^\mu K_\mu
 \end{equation*}
 }
 Collect all terms of $a_\mu$
@@ -2154,13 +2175,13 @@ Collect all terms of $a_\mu$
 
 % \begin{textblock*}{100pt}(250pt,5pt)
 % \begin{equation*}
-%     \tilde \epsilon (\boldsymbol{v}) = v^\mu a_\mu/v^\mu K_\mu 
+%     \tilde \epsilon (\boldsymbol{v}) = v^\mu a_\mu/v^\mu K_\mu
 % \end{equation*}
 % \end{textblock*}
 
-\begin{tcolorbox}[standard jigsaw, opacityback=0]
-    \color{white}
-$v^\alpha K_\alpha = \Omega (1 - n \cos \theta)$ where $n = \lvert \boldsymbol{K} \rvert / \Omega $
+\begin{tcolorbox}[standard jigsaw, opacityback=0, coltext=white]
+    % \color{white}
+$v^\alpha K_\alpha = \omega (1 - n \cos \theta)$ where $n = \lvert \boldsymbol{k} \rvert / \Omega $
 \end{tcolorbox}
 
 \begin{columns}[T]
@@ -2168,12 +2189,12 @@ $v^\alpha K_\alpha = \Omega (1 - n \cos \theta)$ where $n = \lvert \boldsymbol{K
 Nontrivial solutions to EoM requires
 \only<1>{
 \begin{equation*}
-    v^\mu \left( \Omega I + N^\nu_{\phantom{\nu}\mu} \right) a_\nu =0
+    v^\mu \left( \omega \delta^\nu_{\phantom{\nu}\mu} + N^\nu_{\phantom{\nu}\mu} \right) a_\nu =0
 \end{equation*}
 }
 \only<2->{
 \begin{equation*}
-    v^\mu \colorbox{blue!50}{$\left( \Omega I + N^\nu_{\phantom{\nu}\mu} \right) a_\nu$} =0
+    v^\mu \colorbox{blue!50}{$\left( \omega \delta^\nu_{\phantom{\nu}\mu} + N^\nu_{\phantom{\nu}\mu} \right) a_\nu$} =0
 \end{equation*}
 }
 
@@ -2181,15 +2202,15 @@ Nontrivial solutions to EoM requires
     \centering
     $\Rightarrow$
     \begin{equation*}
-    \left( \Omega I + N^\nu_\mu \right) a_\nu =0
-    \end{equation*}    
+    \left( \omega \delta^\nu_{\phantom{\nu}\mu} + N^\nu_\mu \right) a_\nu =0
+    \end{equation*}
 }
 
 \only<4->{
     \centering
     $\Rightarrow$
 \begin{equation*}
-   \operatorname{Det}\left(\omega I + N^{\nu}_{\phantom{\nu}\mu}\right) = 0,
+   \operatorname{Det}\left(\omega I + N \right) = 0,
 \end{equation*}
 }
 
@@ -2209,7 +2230,7 @@ Nontrivial solutions to EoM requires
 
 
    \begin{equation*}
-      N^\mu_{\phantom{\mu}\nu} =
+      N^\mu_{\phantom{\mu}\nu} \to
    \end{equation*}
 \begin{equation*}
     \small
@@ -2229,7 +2250,7 @@ Nontrivial solutions to EoM requires
 
 \end{columns}
 
-\pause
+\only<5->{
 
    \begin{tcolorbox}
     \vspace{-0.8em}
@@ -2237,6 +2258,7 @@ Nontrivial solutions to EoM requires
    \omega = \frac{1}{4}(I_0-I_2), \quad -\frac{1}{4}\left(I_0-I_2\pm \sqrt{ (I_0-2I_1+I_2)(I_0+2I_1+I_2) }\right)
    \end{equation*}
    \end{tcolorbox}
+}
 
 \end{frame}
 
@@ -2258,7 +2280,7 @@ Nontrivial solutions to EoM requires
         \end{tcolorbox}
 \begin{itemize}
     \item \colorbox{red!50}{$\frac{1}{4}(I_0-I_2)$}: MAA solution
-    \item \colorbox{blue!50}{$-\frac{1}{4}\left(I_0-I_2\pm \sqrt{ (I_0-2I_1+I_2)(I_0+2I_1+I_2) }\right)$}: MZA solution 
+    \item \colorbox{blue!50}{$-\frac{1}{4}\left(I_0-I_2\pm \sqrt{ (I_0-2I_1+I_2)(I_0+2I_1+I_2) }\right)$}: MZA solution
 \end{itemize}
 
 \end{frame}
@@ -2269,7 +2291,7 @@ Nontrivial solutions to EoM requires
     \begin{textblock*}{100pt}(230pt,10pt)
         Izaguirre et al, 2017
     \end{textblock*}
-    
+
 \begin{figure}
     \begin{tcolorbox}
         \color{white}
@@ -2306,7 +2328,8 @@ Nontrivial solutions to EoM requires
 
 \begin{frame}{Dispersion Relation}
 
-
+\centering
+      Three beams
 
    \begin{columns}[T]
 
@@ -2326,10 +2349,18 @@ Nontrivial solutions to EoM requires
 
    \end{columns}
 
+
+
+
+
+
+
+\pause
    \begin{tcolorbox}
       \centering
-      Three beams
+      Gap and instability correspondance does NOT hold in three beams case.
    \end{tcolorbox}
+
 
 
 \end{frame}
@@ -2337,11 +2368,15 @@ Nontrivial solutions to EoM requires
 
 \begin{frame}{Dispersion Relations}
 
-    
+
+       \begin{textblock*}{100pt}(230pt,10pt)
+           Remake of Fig.3 of Izaguirre et al, 2017
+       \end{textblock*}
+
    \begin{figure}
       \minipage{0.49\textwidth}
         \includegraphics[width=\linewidth]{assets/dr/spectGarchingPlt.pdf}
-        \caption*{Spectrum $G(u)$, where $u=\cos\theta$}
+        \caption*{Garching spectrum $G(u)$, where $u=\cos\theta$}
       \endminipage\hfill
       \minipage{0.49\textwidth}
       \includegraphics[width=\linewidth]{assets/dr/spectGarchingDRLSAPltBlob.pdf}
@@ -2407,6 +2442,17 @@ Nontrivial solutions to EoM requires
 \end{frame}
 
 
+\subsection{Summary of Dispersion Relation}
+
+\begin{frame}{Summary of Dispersion Relation}
+
+\begin{itemize}
+   \item Neutrino oscillation instability corresponds to gaps of dispersion relations for two beams model;
+   \item It can NOT be generalized to multiple emission beams;
+   \item Gaps should be defined as the gap between dispersion relation and $\Omega=0$ instead of the gaps between dispersion relations.
+\end{itemize}
+
+\end{frame}
 
 
 
@@ -2414,37 +2460,6 @@ Nontrivial solutions to EoM requires
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% Summary
 
-
-\section{Summary}
-
-\begin{frame}{Summary}
-
-
-
-\begin{itemize}\color{ao}
-\item
-The fact that neutrino flavor sates are not mass states causes vacuum oscillations.
-\item
-MSW resonance happens when matter potential cancels out the vacuum diagonal elements of the Hamiltonian.
-\item
-Even matter profile doesn't match MSW requirement, variation in matter profile can cause resonances.
-\item
-Single frequency perturbations in matter profile is a combination of many Rabi oscillations.
-\end{itemize}
-
-
-
-\begin{itemize}\color{red}
- \item
- How to understand and calculate systems with multi-frequency matter profile (turbulence).
- \item
- Combine periodic or even turbulent matter profile with neutrino self-interaction.
-\end{itemize}
-
-
-
-
-\end{frame}
 
 
 
@@ -2461,28 +2476,28 @@ Supported by DOE EPSCoR grant \#DE-SC0008142 at UNM.
 
 
 
-    \begin{frame}[label=citations]{Citations}
-      \framesubtitle{\TeX, \LaTeX, and Beamer}
-
-      
-    \end{frame}
-
-    \begin{frame}[label=bibliography]{Bibliography}
-      \framesubtitle{\TeX, \LaTeX, and Beamer}
-      \begin{thebibliography}{9}
-        \bibitem{Izaguirre2017}
-            Izaguirre, I., Raffelt, G., and Tamborra, I. (2017). \emph{Fast Pairwise Conversion of Supernova Neutrinos: A Dispersion Relation Approach.} Physical Review Letters, 118(2), 021101. 
-        \bibitem{knuth84}
-            Donald~E.~Knuth.
-            \emph{The \TeX book}.
-            Addison-Wesley, 1984.
-        \bibitem{MS05}
-            A.~Mertz and W.~Slough.
-            Edited by B.~Beeton and K.~Berry.
-            \emph{Beamer by example} In TUGboat,
-              Vol. 26, No. 1., pp. 68-73.
-      \end{thebibliography}
-    \end{frame}
+    % \begin{frame}[label=citations]{Citations}
+    %   \framesubtitle{\TeX, \LaTeX, and Beamer}
+    %
+    %
+    % \end{frame}
+    %
+    % \begin{frame}[label=bibliography]{Bibliography}
+    %   \framesubtitle{\TeX, \LaTeX, and Beamer}
+    %   \begin{thebibliography}{9}
+    %     \bibitem{Izaguirre2017}
+    %         Izaguirre, I., Raffelt, G., and Tamborra, I. (2017). \emph{Fast Pairwise Conversion of Supernova Neutrinos: A Dispersion Relation Approach.} Physical Review Letters, 118(2), 021101.
+    %     \bibitem{knuth84}
+    %         Donald~E.~Knuth.
+    %         \emph{The \TeX book}.
+    %         Addison-Wesley, 1984.
+    %     \bibitem{MS05}
+    %         A.~Mertz and W.~Slough.
+    %         Edited by B.~Beeton and K.~Berry.
+    %         \emph{Beamer by example} In TUGboat,
+    %           Vol. 26, No. 1., pp. 68-73.
+    %   \end{thebibliography}
+    % \end{frame}
 
   \end{darkframes}
 
