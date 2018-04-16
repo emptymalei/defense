@@ -85,14 +85,14 @@
 
       \only<1-1>{
       \begin{figure}
-      \includegraphics[width=\textwidth]{assets/neutrino-mass-normal-hierarchy-simple.png}
+      \includegraphics[height=0.4\textheight]{assets/neutrino-mass-normal-hierarchy-simple.png}
       \caption*{Adapted from Olga Mena \& Stephen Parke (2004)}
       \end{figure}
       }
 
       \only<2-2>{
       \begin{figure}
-      \includegraphics[width=\textwidth]{assets/neutrino-mass-inverted-hierarchy-simple.png}
+      \includegraphics[height=0.4\textheight]{assets/neutrino-mass-inverted-hierarchy-simple.png}
       \caption*{Adapted from Olga Mena \& Stephen Parke (2004)}
       \end{figure}
       }
@@ -171,11 +171,12 @@ i\partial_x \begin{pmatrix}
 
 
 \begin{itemize}
+   \item  Mixing angle $\theta_{\mathrm v}$
     \item  Oscillation frequency:
 \begin{equation*}
     \omega_{\mathrm v} = \frac{\delta m^2}{2E}=\frac{m_2^2 - m_1^2}{2E}
 \end{equation*}
-\item  Mixing angle $\theta_{\mathrm v}$
+
 \end{itemize}
 
 
@@ -210,14 +211,14 @@ Hamiltonian: $\mathbf H = - \frac{\vec{\boldsymbol{\sigma}} }{2}\cdot \vec H$
 Flavor isospin: $\vec s = \Psi^{\dagger} \frac{\vec{\boldsymbol{\sigma}} }{2} \Psi $
 
 \small
-Electron flavor survival probability
+Electron flavor survival probability:
 \vspace*{0pt}
 \begin{equation*}
 P = \frac{1}{2} + s_3
 \end{equation*}
 
 
-Equation of motion
+Equation of motion:
 
 \begin{equation*}
 \dot{\vec s} = \vec s \times \vec H
@@ -395,9 +396,9 @@ and $e^{-}$.
 
 
 \begin{itemize}
-    \item Vacuum Hamiltonian
+    \item \colorbox{blue!50}{Vacuum Hamiltonian}
         \tikz[na]\node [coordinate] (n2) {};
-    \item Matter interaction
+    \item \colorbox{red!50}{Matter interaction}
         \tikz[na]\node [coordinate] (n3) {};
     \item<1-> $\lambda(x) = \sqrt{2}G_{\mathrm{F}} n_{\mathrm{e}}(x)$
 \end{itemize}
@@ -747,6 +748,7 @@ Astrophysical environments: supernovae, accretion disks etc
     \caption*{Supernova shock and turbulence. E. Borriello, et al  (2014)}
     %https://inspirehep.net/record/1262293?ln=en
     % arXiv: 1310.7488
+    % 2seconds
 \end{figure}
 
 
@@ -841,6 +843,16 @@ P. Krastev and A. Smirnov (1989); A. Friedland et al (2006); J. Kneller et al (2
 \only<1,5>{
 
 \begin{columns}[T]
+   \begin{column}{0.6\textwidth}
+      \begin{tcolorbox}[title=Scheme]
+   \begin{figure}
+       \centering
+       \includegraphics[width=\textwidth]{assets/rabi-diagram.png}
+   \end{figure}
+   \end{tcolorbox}
+
+
+   \end{column}%
 \begin{column}{0.4\textwidth}
 \begin{tcolorbox}[title=Rabi Oscillation]
 
@@ -855,16 +867,6 @@ Hamiltonian
 \end{tcolorbox}
 
 \end{column}%
-\begin{column}{0.6\textwidth}
-   \begin{tcolorbox}[title=Scheme]
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{assets/rabi-diagram.png}
-\end{figure}
-\end{tcolorbox}
-
-
-\end{column}
 \end{columns}
 
 
@@ -1980,8 +1982,8 @@ Identify the condition for complex eigenvalues
 \pause
 
 \begin{itemize}
-   \item Normal hierarchy: $\omega_v>0$, requires $\mu  > \omega_{\mathrm v}/2 \xi$;
-   \item Inverted hierarchy: $\omega_v<0$, requires $\mu  < \omega_{\mathrm v}/2 \xi$.
+   \item Normal hierarchy: $\omega_{\mathrm v}>0$, requires $\mu  > \omega_{\mathrm v}/2 \xi$;
+   \item Inverted hierarchy: $\omega_{\mathrm v}<0$, requires $\mu  < \omega_{\mathrm v}/2 \xi$.
 \end{itemize}
 
 \pause
@@ -2057,7 +2059,7 @@ Equation of motion for off-diagonal element of density matrix (Izaguirre et al, 
 \begin{itemize}
     \item \colorbox{blue!50}{$ v^\mu$}:  four-velocity of neutrinos $(1, \boldsymbol v) $
     \item \colorbox{red!50}{$\Lambda$}: matter contribution $( \sqrt{2}G_{\mathrm F} n_{\mathrm e}, \sqrt{2}G_F n_e \boldsymbol v_{\mathrm e} )$
-    \item \colorbox{ao!60}{$\Phi$}: neutrino
+    \item \colorbox{ao!60}{$\Phi$}: neutrino flux $( \sqrt{2}G_{\mathrm F} n_{\nu}, \sqrt{2}G_F n_\nu \boldsymbol v )$
     \item \colorbox{armygreen!70}{$G(\mathbf v')$}: electron lepton number of neutrinos $\sqrt{2}G_{\mathrm F} \int_0^\infty \frac{E^2 dE}{2\pi^2} \left( n_{\nu_{\mathrm e}} - n_{\bar\nu_{\mathrm e}} \right)$
 \end{itemize}
 
@@ -2114,7 +2116,7 @@ with \colorbox{red!50}{$k_\mu \to ( \omega, \boldsymbol{k} )$}
 \end{tcolorbox}
 
 \only<6>{
-Without neutrino self-interaction: $v^\mu K_\mu = 0$
+Without neutrino self-interaction: $v^\mu k_\mu = 0$
 }
 
 \end{frame}
@@ -2127,7 +2129,7 @@ Without neutrino self-interaction: $v^\mu K_\mu = 0$
     % \begin{tcolorbox}[standard jigsaw, opacityback=0]
         \begin{equation*}
             \color{white}
-            v^\mu K_\mu \tilde\epsilon (\boldsymbol{v} ) = - \int d\Gamma' v^\mu v'_\mu G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}')
+            v^\mu k_\mu \tilde\epsilon (\boldsymbol{v} ) = - \int d\Gamma' v^\mu v'_\mu G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}')
         \end{equation*}
     % \end{tcolorbox}
 \end{textblock*}
@@ -2153,19 +2155,19 @@ EoM
 
 
 \begin{equation*}
-    v^\mu K_\mu \tilde \epsilon (\boldsymbol{v}) = v^\mu a_\mu
+    v^\mu k_\mu \tilde \epsilon (\boldsymbol{v}) = v^\mu a_\mu
 \end{equation*}
 \pause
 {\centering
 $\Longrightarrow$
 \begin{equation*}
-    \tilde \epsilon (\boldsymbol{v}) = v^\mu a_\mu/v^\mu K_\mu
+    \tilde \epsilon (\boldsymbol{v}) = v^\mu a_\mu/v^\mu k_\mu
 \end{equation*}
 }
 Collect all terms of $a_\mu$
 
 \begin{equation*}
-    v^\mu \left( \delta_\mu^\nu +  \int d\Gamma' \frac{ G(\boldsymbol{ v}') v'_\mu v^\nu }{ v^\alpha K_\alpha }   \right) a_\nu = 0
+    v^\mu \left( \delta_\mu^\nu +  \int d\Gamma' \frac{ G(\boldsymbol{ v}') v'_\mu v^\nu }{ v^\alpha k_\alpha }   \right) a_\nu = 0
 \end{equation*}
 
 \end{frame}
@@ -2181,7 +2183,7 @@ Collect all terms of $a_\mu$
 
 \begin{tcolorbox}[standard jigsaw, opacityback=0, coltext=white]
     % \color{white}
-$v^\alpha K_\alpha = \omega (1 - n \cos \theta)$ where $n = \lvert \boldsymbol{k} \rvert / \Omega $
+Axial symmetryc: $v^\alpha k_\alpha = \omega (1 - n \cos \theta)$ where $n = \lvert \boldsymbol{k} \rvert / \omega $
 \end{tcolorbox}
 
 \begin{columns}[T]
@@ -2202,7 +2204,7 @@ Nontrivial solutions to EoM requires
     \centering
     $\Rightarrow$
     \begin{equation*}
-    \left( \omega \delta^\nu_{\phantom{\nu}\mu} + N^\nu_\mu \right) a_\nu =0
+    \left( \omega \delta^\nu_{\phantom{\nu}\mu} + N^\nu_{\phantom{\nu}\mu} \right) a_\nu =0
     \end{equation*}
 }
 
@@ -2419,10 +2421,14 @@ Apply Stokhotski-Plemelj theorem
            Remake of Fig.3 of Izaguirre et al, 2017
        \end{textblock*}
 
+Define $u=\cos\theta$
+
+Garching spectrum:
+
    \begin{figure}
       \minipage{0.49\textwidth}
         \includegraphics[width=\linewidth]{assets/dr/spectGarchingPlt.pdf}
-        \caption*{Garching spectrum $G(u)$, where $u=\cos\theta$}
+        \caption*{Garching spectrum $G(u)$}
       \endminipage\hfill
       \minipage{0.49\textwidth}
       \includegraphics[width=\linewidth]{assets/dr/spectGarchingDRLSAPltBlob.pdf}
@@ -2441,6 +2447,8 @@ Apply Stokhotski-Plemelj theorem
 
 \begin{frame}{Dispersion Relations}
 
+ Box spectrum: $-0.1$ within range $u\in [-1,-0.3)$ and $1$ within range $u\in [-0.3,1]$
+
    \begin{figure}
       \minipage{0.49\textwidth}
       \includegraphics[width=\linewidth]{assets/dr/spectBoxC1MAADRPltBlob.pdf}
@@ -2452,6 +2460,10 @@ Apply Stokhotski-Plemelj theorem
       \endminipage\hfill
     %   \caption*{Dispersion relation and linear stability analysis for box spectrum. The box spectrum is defined to be $-0.1$ within range $u\in [-1,-0.3)$ and $1$ within range $u\in [-0.3,1]$. Left panel shows the dispersion relation and the complex $k$ for real $\omega$ for MAA solution. Right panel is the corresponding result for MZA solution. Dash-dotted gray lines are $\omega= \pm k$ which sets the boundaries of the forbidden region for dispersion relation.
     %    }
+    \pause
+    \begin{tcolorbox}
+      Instabilities do not only show up as gaps.
+    \end{tcolorbox}
    \end{figure}
 
 
