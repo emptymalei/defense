@@ -21,7 +21,7 @@
 %%   \begin{otherlanguage}{slovak}  ... \end{otherlanguage}
 %%
 %% These macros specify information about the presentation
-\title{Neutrino Flavor Conversions in Dense Medium: Matter Stimulation, Dispersion Relation, and Neutrino Halo} %% that will be typeset on the
+\title{Neutrino Flavor Conversions in Dense Medium: Matter Stimulation and Dispersion Relation} %% that will be typeset on the
 \author{Lei Ma\\ Supervisor: Huaiyu Duan}
 \subtitle{PhD Defense} %% title page.
 
@@ -54,6 +54,11 @@
   \begin{darkframes}
 
 
+      \begin{frame}<beamer>[noframenumbering]
+        \frametitle{Outline}
+        \tableofcontents
+      \end{frame}
+
     \section{Neutrino Oscillations}
 
     \subsection{Neutrinos as Fundamental Particles}
@@ -78,7 +83,7 @@
           \item fermions,
           \item electrically neutral,
           \item three flavors,
-          \item none vanishing mass.
+          \item non-vanishing mass.
           \end{itemize}
 
 
@@ -122,6 +127,10 @@
 
 \begin{frame}{Why Do Neutrinos Oscillate?}
 
+\begin{tcolorbox}[box align=center,halign=center,valign=center, standard jigsaw,opacityback=0, coltext=white]
+   Two flavor senario
+\end{tcolorbox}
+
 Flavor states are different from mass states.
 
 \begin{equation*}
@@ -136,6 +145,9 @@ Flavor states are different from mass states.
 \psi_2
 \end{pmatrix}
 \end{equation*}
+
+
+$\theta_{\mathrm v}$: vacuum mixing angle
 
 \end{frame}
 
@@ -1025,7 +1037,7 @@ Rabi frequency
 % Basis
 
 
-\begin{tcolorbox}[title=Basis]
+\begin{tcolorbox}[title=Hamiltonian]
 
 \only<2>{Background} matter basis:
 
@@ -1138,12 +1150,15 @@ Matter potential frequency
 
 \begin{tcolorbox}[colback=white]
 \begin{figure}
-\includegraphics[width=0.9\textwidth]{assets/rabiOscillationsNeutrinoCoincidence-single-frequency}
+\includegraphics[width=0.9\textwidth]{assets/rabiOscillationsNeutrinoCoincidence-single-frequency-with-legend}
 %stimulated-neutrino-oscillations-kneller.png}
 \caption*{
-\color{black}Transition between two mass states in background matter potential $\lambda_0$\\
-Lines: Rabi formula\\
-Dots, diamonds, triangles, and squares are {\bf full solutions without approximations} for {\color{black}$k=\omega_{\mathrm m}$}, {\color{blue}$k=(1-2\times 10^{-5})\omega_{\mathrm m}$}, and {\color{red}$k=(1-10^{-4})\omega_{\mathrm m}$} respectively.
+\color{black}Transition between two mass states in background matter potential $\lambda_0$; $A_1 = -10^{-4}\omega_{\mathrm m}$
+%\\
+% Lines: Rabi formula\\
+% \blacksquare : {\color{black}$k=\omega_{\mathrm m}$} \\
+% : {\color{blue}$k=(1-2\times 10^{-5})\omega_{\mathrm m}$} \\
+% {\tikz\draw[red,fill=red] (0,0) circle (.5ex);} : {\color{red}$k=(1-10^{-4})\omega_{\mathrm m}$}
 }
 \end{figure}
 \end{tcolorbox}
@@ -1378,34 +1393,35 @@ D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{
 
 \begin{frame}{Rabi Oscillations With Multiple Driving Frequencies}
 
-\begin{textblock*}{100pt}(260pt,10pt)
-% \textblockcolour{black}
-\tiny
-\begin{equation*}
-D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{2\alpha_1(\omega_{\mathrm m}-k_2)} \right\vert
-\end{equation*}
-\end{textblock*}
+% \begin{textblock*}{100pt}(260pt,10pt)
+% % \textblockcolour{black}
+% \tiny
+% \begin{equation*}
+% D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{2\alpha_1(\omega_{\mathrm m}-k_2)} \right\vert
+% \end{equation*}
+% \end{textblock*}
 
 
 \begin{figure}
-\includegraphics[width=0.9\textwidth]{assets/interference-reduction}
-\caption*{$A_1=10^{-4}\omega_{\mathrm m}$, $k_1= \omega_{\mathrm m}$; Grid lines: amplitude predicted using $1/(1+D'^2)$
+\includegraphics[width=0.9\textwidth]{assets/interference-reduction-slide-with-legend}
+\caption*{$A_1=10^{-4}\omega_{\mathrm m}$, $k_1= \omega_{\mathrm m}$; Legend shows $(A_2, k_2)$; Grid lines: amplitude predicted using $1/(1+D'^2)$
 }
 \end{figure}
 
+
 % Dashed line, dotted line, dash-dotted line, and solid line are for $A_2=10^{-2}\omega_{\mathrm{m}}$, $k_2=10\omega_{\mathrm m}$, $A_2=10^{-2}\omega_{\mathrm{m}}$, $k_2=10^{-1}\omega_{\mathrm m}$, $A_2=5.0\times 10^{-2}\omega_{\mathrm{m}}$, $k_2=10\omega_{\mathrm m}$, and $A_2=5\times 10^{-2}\omega_{\mathrm{m}}$, $k_2=10^{-1}\omega_{\mathrm m}$
 
-{\tiny
-\vspace{-15pt}
-\begin{center}
-    \begin{tabular}{c|c|c|c}
-    \multicolumn{4}{c}{ $\alpha_2$, $k_2$ values} \\
-    \hline
-       Dashed  &  dotted & dash-dotted & solid \\
-       $10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  &  $10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$  & $5.0\times 10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  & $5\times 10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$
-    \end{tabular}
-\end{center}
-}
+% {\tiny
+% \vspace{-15pt}
+% \begin{center}
+%     \begin{tabular}{c|c|c|c}
+%     \multicolumn{4}{c}{ $A_2$, $k_2$ values} \\
+%     \hline
+%        Dashed  &  dotted & dash-dotted & solid \\
+%        $10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  &  $10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$  & $5.0\times 10^{-2}\omega_{\mathrm{m}}$, $10\omega_{\mathrm m}$  & $5\times 10^{-2}\omega_{\mathrm{m}}$, $10^{-1}\omega_{\mathrm m}$
+%     \end{tabular}
+% \end{center}
+% }
 
 \end{frame}
 
@@ -1551,7 +1567,7 @@ where
 \begin{columns}[T]
 \begin{column}{0.5\textwidth}
 
-\only<1,2>{
+\only<1,2, 3>{
 
 \begin{figure}
     \centering
@@ -1579,7 +1595,7 @@ where
 \end{column}%
 \begin{column}{0.5\textwidth}
 
-\only<1>{
+\only<1,2>{
 \small
 \begin{equation*}
     \lambda(x)= \lambda_0 + \sum_1^\infty \lambda_n \cos (k_n x)
@@ -1592,9 +1608,18 @@ where
     \lambda_n = & 2(-1)^n(\Lambda_1-\Lambda_2)/(2n\pi-\pi) \\
     k_n =& 2\pi (2n-1)/X
 \end{align*}
+
 }
 
 \only<2>{
+\begin{tcolorbox}
+   \begin{equation*}
+      k_1 = \omega_{\mathrm m}
+   \end{equation*}
+\end{tcolorbox}
+}
+
+\only<3>{
 \begin{figure}
         \includegraphics[width=\columnwidth]{assets/castle-wall-1}%
      \caption*{Transition probability is a Rabi resonance with small variations due to higher orders.}
@@ -1955,7 +1980,7 @@ i\partial_{z}\begin{pmatrix}
 \begin{frame}{Linear Stability Analysis}
 
 
-Solution of the form
+Collective mode
 \begin{equation*}
    \begin{pmatrix}
       \epsilon_1(z)\\
@@ -2101,7 +2126,7 @@ Collective mode
 \begin{equation*}
     v^\mu \colorbox{red!50}{$\left( K_\mu -( \Lambda + \Phi )_\mu \right)$} \tilde\epsilon (\boldsymbol{v} ) = - \int d\Gamma' v^\mu v'_\mu G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}')
 \end{equation*}
-with \colorbox{red!50}{$K_\mu \to ( \Omega, \boldsymbol{K} )$}
+with $K_\mu \to ( \Omega, \boldsymbol{K} )$
 }
 
 \only<5->{
@@ -2183,7 +2208,7 @@ Collect all terms of $a_\mu$
 
 \begin{tcolorbox}[standard jigsaw, opacityback=0, coltext=white]
     % \color{white}
-Axial symmetryc: $v^\alpha k_\alpha = \omega (1 - n \cos \theta)$ where $n = \lvert \boldsymbol{k} \rvert / \omega $
+Axially symmetric: $v^\alpha k_\alpha = \omega (1 - n \cos \theta)$ where $n = \lvert \boldsymbol{k} \rvert / \omega $
 \end{tcolorbox}
 
 \begin{columns}[T]
@@ -2281,8 +2306,8 @@ Nontrivial solutions to EoM requires
         \end{equation*}
         \end{tcolorbox}
 \begin{itemize}
-    \item \colorbox{red!50}{$\frac{1}{4}(I_0-I_2)$}: MAA solution
-    \item \colorbox{blue!50}{$-\frac{1}{4}\left(I_0-I_2\pm \sqrt{ (I_0-2I_1+I_2)(I_0+2I_1+I_2) }\right)$}: MZA solution
+    \item \colorbox{red!50}{MAA solution}
+    \item \colorbox{blue!50}{MZA solution}
 \end{itemize}
 
 \end{frame}
@@ -2323,7 +2348,7 @@ Nontrivial solutions to EoM requires
 
 \begin{tcolorbox}
    \centering
-   Two beams
+   Two zenith angles
 \end{tcolorbox}
 
 \end{frame}
@@ -2331,7 +2356,7 @@ Nontrivial solutions to EoM requires
 \begin{frame}{Dispersion Relation}
 
 \centering
-      Three beams
+      Three zenith angles
 
    \begin{columns}[T]
 
@@ -2360,9 +2385,38 @@ Nontrivial solutions to EoM requires
 \pause
    \begin{tcolorbox}
       \centering
-      Gap and instability correspondance does NOT hold in three beams case.
+      Gap and instability correspondance does NOT hold in three-zenith-angle model case.
    \end{tcolorbox}
 
+
+
+\end{frame}
+
+
+
+\begin{frame}{Dispersion Relations}
+
+
+       \begin{textblock*}{100pt}(230pt,10pt)
+           Remake of Fig.3 of Izaguirre et al, 2017
+       \end{textblock*}
+
+Define $u=\cos\theta$
+
+Garching spectrum:
+
+   \begin{figure}
+      \minipage{0.49\textwidth}
+        \includegraphics[width=\linewidth]{assets/dr/spectGarchingPlt.pdf}
+        \caption*{Garching spectrum $G(u)$}
+      \endminipage\hfill
+      \minipage{0.49\textwidth}
+      \includegraphics[width=\linewidth]{assets/dr/spectGarchingDRLSAPltBlob.pdf}
+      \caption*{ MAA: red; MZA: blue and green }
+      \endminipage\hfill
+    %   \caption*{Dispersion relation and linear stability analysis (right panel) for a spectrum constructed from Garching 1D simulation data (left panel). Solid red line is dispersion relation for MAA solution while blue and green lines are for MZA solutions. Light red (blue and green) blob is instability for MAA (MZA) solution.
+    %    }
+   \end{figure}
 
 
 \end{frame}
@@ -2414,35 +2468,6 @@ Apply Stokhotski-Plemelj theorem
 
 \end{frame}
 
-\begin{frame}{Dispersion Relations}
-
-
-       \begin{textblock*}{100pt}(230pt,10pt)
-           Remake of Fig.3 of Izaguirre et al, 2017
-       \end{textblock*}
-
-Define $u=\cos\theta$
-
-Garching spectrum:
-
-   \begin{figure}
-      \minipage{0.49\textwidth}
-        \includegraphics[width=\linewidth]{assets/dr/spectGarchingPlt.pdf}
-        \caption*{Garching spectrum $G(u)$}
-      \endminipage\hfill
-      \minipage{0.49\textwidth}
-      \includegraphics[width=\linewidth]{assets/dr/spectGarchingDRLSAPltBlob.pdf}
-      \caption*{ MAA: red; MZA: blue and green }
-      \endminipage\hfill
-    %   \caption*{Dispersion relation and linear stability analysis (right panel) for a spectrum constructed from Garching 1D simulation data (left panel). Solid red line is dispersion relation for MAA solution while blue and green lines are for MZA solutions. Light red (blue and green) blob is instability for MAA (MZA) solution.
-    %    }
-   \end{figure}
-
-
-\end{frame}
-
-
-
 
 
 \begin{frame}{Dispersion Relations}
@@ -2462,7 +2487,7 @@ Garching spectrum:
     %    }
     \pause
     \begin{tcolorbox}
-      Instabilities do not only show up as gaps.
+      Instabilities occur even without dispersion relation gaps.
     \end{tcolorbox}
    \end{figure}
 
@@ -2476,9 +2501,9 @@ Garching spectrum:
 \begin{frame}{Summary of Dispersion Relation}
 
 \begin{itemize}
-   \item Neutrino oscillation instability corresponds to gaps of dispersion relations for two beams model;
-   \item It can NOT be generalized to multiple emission beams;
-   \item Gaps should be defined as the gap between dispersion relation and $\Omega=0$ instead of the gaps between dispersion relations.
+   \item Neutrino oscillation instability corresponds to gaps of dispersion relations for two-zenith-angle models.
+   \item It can NOT be generalized to multiple-zenith-angle models nor continuous emission models.
+   \item If there exists gaps, gaps should be defined as the gap between dispersion relation and $\omega=0$ instead of the gaps between dispersion relation curves.
 \end{itemize}
 
 \end{frame}
@@ -2494,9 +2519,9 @@ Garching spectrum:
 
 \begin{frame}{Acknowledgement}
 
-I am very thankful to my advisor Professor Huaiyu Duan, Dr. Sajad Abbar, and Dr. Shashank Shalgar, and Joshua Martin, for all the help in both research and life.
+I am very thankful to my advisor Professor Huaiyu Duan, as well as my colleagues Dr. Sajad Abbar, and Dr. Shashank Shalgar, and Joshua Martin, for all the help in both research and life.
 
-Supported by DOE EPSCoR grant \#DE-SC0008142 at UNM.
+My research is supported by DOE.
 
 \end{frame}
 
