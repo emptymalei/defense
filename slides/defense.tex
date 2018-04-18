@@ -382,7 +382,7 @@ and $e^{-}$.
 
 
 \begin{itemize}
-    \item[] Hamiltonian with matter interaction in flavor basis  ($\omega_{\mathrm{v}}=\delta m^2 \big/ 2E$):
+    \item[] Hamiltonian with matter interaction in flavor basis  (\color{white}$\omega_{\mathrm{v}}=\delta m^2 \big/ 2E$):
         \tikz[na] \node[coordinate] (n1) {};
 \end{itemize}
 
@@ -813,13 +813,17 @@ Astrophysical environments: supernovae, accretion disks etc
 \only<1>{
 \centering
 Transition probabilities between mass states in matter.\newline
-
 }
 
 \only<2>{
 {\small
 P. Krastev and A. Smirnov (1989); A. Friedland et al (2006); J. Kneller et al (2013); K. Patton et al (2014);
 }
+
+\begin{textblock*}{100pt}(280pt,10pt)
+   $A=0.1\omega_{\mathrm m}$\\ $k=0.995\omega_{\mathrm m}$\\ $\theta_{\mathrm{m}}=\pi/6$
+\end{textblock*}
+
 }
 
 
@@ -1316,77 +1320,19 @@ Resonance condition for each mode: $nk=\omega_{\mathrm m}$
 \begin{frame}{Rabi Oscillations With Multiple Driving Frequencies}
 
 
-\only<1>{
-Consider Rabi oscillation with two driving frequencies $k_1=n_1 k$, $k_2=n_2 k$
-
-\begin{equation*}
-    \vec H = \begin{pmatrix}
-    0\\
-    0\\
-    \omega_m
-    \end{pmatrix} + \alpha_1\begin{pmatrix}
-     \cos(k_1x)\\
-    -\sin(k_1x)\\
-    0
-\end{pmatrix} + \colorbox{blue!50}{$\alpha_2\begin{pmatrix}
-    \cos(k_2x)\\
-    -\sin(k_2x)\\
-    0
-    \end{pmatrix}$}
-\end{equation*}
-
-Corotating frame of the second potential
 
 
-
-\begin{equation*}
-    \vec H = \begin{pmatrix}
-    0\\
-    0\\
-    \omega_m - k_2
-    \end{pmatrix} + \alpha_1\begin{pmatrix}
-     \cos(k_1-k_2x)\\
-    -\sin(k_1-k_2x)\\
-    0
-\end{pmatrix} + \colorbox{blue!50}{$\alpha_2\begin{pmatrix}
-    1\\
-    0\\
-    0
-    \end{pmatrix}$}
-\end{equation*}
-
-}
-
-\only<1>{
-Energy gap in this frame becomes the length of the vector
-
-\begin{equation*}
-    \begin{pmatrix}
-    0\\
-    0\\
-    \omega_m - k_2
-\end{pmatrix} + \colorbox{blue!50}{$\alpha_2\begin{pmatrix}
-    1\\
-    0\\
-    0
-    \end{pmatrix}$}
-\end{equation*}
-}
-
-\only<2->{
-
-% Energy gap in this frame becomes the length of the vector
-% \begin{equation*}
-% \sqrt{(\omega_{\mathrm m} - k_2)^2 + \alpha_2^2 } \to \omega_{\mathrm m} - k_2 + \frac{1}{2}\frac{\alpha_2^2}{\omega_{\mathrm m}-k_2}
-% \end{equation*}
-
-Relative detuning
+Relative detuning for two driving potentials, $A_1,k_1$ and $A_2, k_2$
 
 \begin{equation*}
 D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{2\alpha_1(\omega_{\mathrm m}-k_2)} \right\vert
 \end{equation*}
 
-}
+Amplitude
+
+\begin{equation*}
+   \frac{1}{1+D'^2}
+\end{equation*}
 
 \end{frame}
 
@@ -1762,27 +1708,31 @@ Resonance condition
 
 \end{frame}
 
-\begin{frame}{Neutrino Self-interactions}
+\begin{frame}{Two-Beam Model}
 
 \begin{columns}[T]
 
 \begin{column}{0.3\textwidth}
 
-\begin{itemize}
-   \item $H_v = - \frac{1}{2}\omega \sigma_3 $
-   \item $H_m = \frac{1}{2}\lambda \sigma_3$
-   \item $H_{\nu\nu,2} = \frac{1}{2}\mu_1 \rho_1$
-   \item $H_{\nu\nu,1} = \frac{1}{2}\mu_2 \rho_2$
-\end{itemize}
+% \begin{tcolorbox}[coltext=white,standard jigsaw,opacityback=0]
+$H_{\mathrm v,1} = - \frac{1}{2}\omega_{\mathrm v} \sigma_3 $\\
+$H_{\mathrm v,2} =  \frac{1}{2}\omega_{\mathrm v} \sigma_3 $\\
+   % \item $H_m = \frac{1}{2}\lambda \sigma_3$
+$H_{\nu\nu} = \frac{1}{2} (\mu_1\rho_1- \mu_2\rho_2)$
+   % \item $H_{\nu\nu} = -\frac{1}{2}\mu_2 \rho_2$
+% \end{tcolorbox}
+
+
 where
 \begin{equation*}
-   \mu_i = \sqrt{2} G_{\mathrm F} \xi n_i
+   \mu_{1(2)} = \sqrt{2} G_{\mathrm F} \xi n_{2(1)}
 \end{equation*}
 
 Geometric factor
-\begin{equation*}
-\xi = (1-\cos(\theta_1-\theta_2))
-\end{equation*}
+\begin{align*}
+\xi =& (1-\cos(\theta_1-\theta_2)) \\
+=& 1%, \quad \text{since $\theta_1-\theta_2=\pi/2$}
+\end{align*}
 
 
 
@@ -1790,8 +1740,16 @@ Geometric factor
 
 \begin{column}{0.7\textwidth}
 \begin{figure}
-   \includegraphics[width=\textwidth]{assets/two-beams-model}
+   \includegraphics[width=\textwidth]{assets/two-beams-model-sym}
+   \caption*{$\rho_1$: neutrinos; $\rho_2$: antineutrinos
+   $\theta_1= \pi/6+\pi/2$; $\theta_2 = \pi/6$}
+   $\theta_{\mathrm v}=0$
 \end{figure}
+
+% \begin{tcolorbox}[standard jigsaw, opacityback=0,coltext=white, halign=center]
+%
+% \end{tcolorbox}
+
 \end{column}
 
 
@@ -1801,9 +1759,53 @@ Geometric factor
 \end{frame}
 
 
+% \begin{frame}{Two-Beam Model}
+%
+%    \begin{textblock*}{100pt}(220pt,10pt)
+%    % \textblockcolour{black}
+%    % \TPoptions{standard jigsaw, opacityback=0, coltext=white }
+%    \small
+%    \begin{align*}
+%       H_{\nu\nu,1} = \frac{1}{2}\mu_1 \rho_1 \xi , \qquad
+%       H_{\nu\nu,2} = \frac{1}{2}\mu_2 \rho_2 \xi
+%    \end{align*}
+%    \end{textblock*}
+%
+%
+% \begin{columns}[T]
+%    \begin{column}{0.55\textwidth}
+%    \begin{figure}
+%       \includegraphics[width=\textwidth]{assets/two-beams-model-sym}
+%       \caption*{$\rho_1$: neutrinos; $\rho_2$: antineutrinos}
+%    \end{figure}
+%    \end{column}%
+% \begin{column}{0.45\textwidth}
+%
+%    \begin{equation*}
+%    i \partial_z \rho_i = \left[ H_i, \rho_i \right]
+%    \end{equation*}
+%
+%    \begin{equation*}
+%    \theta_1 =  2\pi/3, \theta_2 = \pi/6
+%    \end{equation*}
+%
+%
+%
+% \end{column}%
+% \end{columns}
+%
+%
+%
+% \end{frame}
+
+
 \begin{frame}{Neutrino Self-interactions}
 
-\begin{tcolorbox}
+% \begin{textblock*}{100pt}(250pt,10pt)
+%    \mu =
+% \end{textblock*}
+
+% \begin{tcolorbox}
    \only<1>{
    \begin{figure}
       \includegraphics[width=\textwidth]{assets/bipolar-animation/bipolar-animie001.png}
@@ -1844,7 +1846,7 @@ Geometric factor
       \includegraphics[width=\textwidth]{assets/bipolar-animation/bipolar-animie100.png}
    \end{figure}
    }
-\end{tcolorbox}
+% \end{tcolorbox}
 
 % \movie[autostart]{Movie}{assets/bipolar-movie.mp4}
 
@@ -1910,29 +1912,24 @@ Suppose we have neutrino flux $10^{50}\mathrm{ergs\cdot s^{-1}}$. We estimate th
 
    \begin{textblock*}{100pt}(220pt,10pt)
    % \textblockcolour{black}
-   \TPoptions{showboxes = true }
+   % \TPoptions{standard jigsaw, opacityback=0, coltext=white }
    \small
    \begin{align*}
-      H_{\nu\nu,2} = \frac{1}{2}\mu_1 \rho_1 \xi , \qquad
-      H_{\nu\nu,1} = \frac{1}{2}\mu_2 \rho_2 \xi
+      H_{\nu\nu,1} = \frac{1}{2}\mu_1 \rho_1 , \qquad
+      H_{\nu\nu,2} = \frac{1}{2}\mu_2 \rho_2
    \end{align*}
    \end{textblock*}
 
 
 \begin{columns}[T]
-
-
-
-      \begin{column}{0.55\textwidth}
-      \begin{figure}
-         \includegraphics[width=\textwidth]{assets/two-beams-model-sym}
-      \end{figure}
-      \end{column}
-
+   \begin{column}{0.55\textwidth}
+   \begin{figure}
+      \includegraphics[width=\textwidth]{assets/two-beams-model-sym}
+      \caption*{$\rho_1$: neutrinos; $\rho_2$: antineutrinos}
+   \end{figure}
+   \end{column}%
 \begin{column}{0.45\textwidth}
 
-$\rho_1$: neutrinos; \newline
-$\rho_2$: antineutrinos
    \begin{equation*}
    i \partial_z \rho_i = \left[ H_i, \rho_i \right]
    \end{equation*}
@@ -1958,8 +1955,8 @@ i\partial_{z}\begin{pmatrix}
 \epsilon_1 \\
 \epsilon_2
 \end{pmatrix} = \begin{pmatrix}
-\omega_{\mathrm v} - \mu \xi &  \mu  \xi \\
--\mu \xi & -\omega_{\mathrm v} + \mu  \xi
+-\mu/2 + \omega_{\mathrm v}   &  \mu/2  \\
+\mu/2 & \omega_{\mathrm v} - \mu/2
 \end{pmatrix}\begin{pmatrix}
 \epsilon_1 \\
 \epsilon_2
@@ -1967,9 +1964,7 @@ i\partial_{z}\begin{pmatrix}
 \end{equation*}
 
 
-\end{column}
-
-
+\end{column}%
 \end{columns}
 
 
@@ -1995,20 +1990,20 @@ Collective mode
 Eigenvalues or collective oscillation frequencies
 
 \begin{equation*}
-   K_z = \pm \sqrt{ \omega_{\mathrm v} ( \omega_{\mathrm v}- 2\mu \xi ) }
+   K_z = \pm \sqrt{ \omega_{\mathrm v} ( \omega_{\mathrm v}- 2\mu ) }
 \end{equation*}
 
 Identify the condition for complex eigenvalues
 
 \begin{equation*}
-   \omega_{\mathrm v} ( \omega_{\mathrm v}- 2\mu \xi ) < 0
+   \omega_{\mathrm v} ( \omega_{\mathrm v}- \mu ) < 0
 \end{equation*}
 
 \pause
 
 \begin{itemize}
-   \item Normal hierarchy: $\omega_{\mathrm v}>0$, requires $\mu  > \omega_{\mathrm v}/2 \xi$;
-   \item Inverted hierarchy: $\omega_{\mathrm v}<0$, requires $\mu  < \omega_{\mathrm v}/2 \xi$.
+   \item Normal hierarchy: $\omega_{\mathrm v}>0$, requires $\mu  > \omega_{\mathrm v} $;
+   \item Inverted hierarchy: $\omega_{\mathrm v}<0$, requires $\cancel{\mu < \omega_{\mathrm v} < 0}$, no instability.
 \end{itemize}
 
 \pause
@@ -2055,7 +2050,7 @@ Identify the condition for complex eigenvalues
 
     \begin{itemize}[<+->]
         \item Linear stability analysis $\rightarrow$ dispersion relation for $\Omega$ and $\mathbf K$.
-        \item Instabilities occur in dispersion relation gaps.
+        \item Instabilities and dispersion relation gaps are possibly related.
     \end{itemize}
 
     \end{frame}
@@ -2074,7 +2069,7 @@ Equation of motion for off-diagonal element of density matrix (Izaguirre et al, 
 
 \only<2->{
 \begin{equation*}
-   i(\partial_t + {\boldsymbol v} \cdot \boldsymbol{\nabla}_r  ) \epsilon (\boldsymbol v) = \colorbox{blue!50}{$ v^\mu$} ( \colorbox{red!50}{$\Lambda$} + \colorbox{ao!60}{$\Phi$} )_\mu - \int d\Gamma' v^\mu v'_\mu \colorbox{armygreen!70}{$G(\boldsymbol v')$} \epsilon(\boldsymbol v')
+   i(\partial_t + {\boldsymbol v} \cdot \mathbf{\nabla}_{\boldsymbol{r}}  ) \epsilon (\boldsymbol v) = \colorbox{blue!50}{$ v^\mu$} ( \colorbox{red!50}{$\Lambda$} + \colorbox{ao!60}{$\Phi$} )_\mu - \int d\Gamma' v^\mu v'_\mu \colorbox{armygreen!70}{$G(\boldsymbol v')$} \epsilon(\boldsymbol v')
 \end{equation*}
 }
 
@@ -2085,7 +2080,7 @@ Equation of motion for off-diagonal element of density matrix (Izaguirre et al, 
     \item \colorbox{blue!50}{$ v^\mu$}:  four-velocity of neutrinos $(1, \boldsymbol v) $
     \item \colorbox{red!50}{$\Lambda$}: matter contribution $( \sqrt{2}G_{\mathrm F} n_{\mathrm e}, \sqrt{2}G_F n_e \boldsymbol v_{\mathrm e} )$
     \item \colorbox{ao!60}{$\Phi$}: neutrino flux $( \sqrt{2}G_{\mathrm F} n_{\nu}, \sqrt{2}G_F n_\nu \boldsymbol v )$
-    \item \colorbox{armygreen!70}{$G(\mathbf v')$}: electron lepton number of neutrinos $\sqrt{2}G_{\mathrm F} \int_0^\infty \frac{E^2 dE}{2\pi^2} \left( n_{\nu_{\mathrm e}} - n_{\bar\nu_{\mathrm e}} \right)$
+    \item \colorbox{armygreen!70}{$G(\boldsymbol{v}')$}: electron lepton number of neutrinos $\sqrt{2}G_{\mathrm F} \int_0^\infty \frac{E^2 dE}{2\pi^2} \left( n_{\nu_{\mathrm e}} - n_{\bar\nu_{\mathrm e}} \right)$
 \end{itemize}
 
 
@@ -2277,42 +2272,135 @@ Nontrivial solutions to EoM requires
 
 \end{columns}
 
-\only<5->{
+% \only<5->{
+%
+%    \begin{tcolorbox}
+%     \vspace{-0.8em}
+%    \begin{equation*}
+%    \omega = \frac{1}{4}(I_0-I_2), \quad -\frac{1}{4}\left(I_0-I_2\pm \sqrt{ (I_0-2I_1+I_2)(I_0+2I_1+I_2) }\right)
+%    \end{equation*}
+%    \end{tcolorbox}
+% }
 
-   \begin{tcolorbox}
-    \vspace{-0.8em}
+\end{frame}
+
+
+\begin{frame}{Dispersion Relation}
+
+   \begin{textblock*}{100pt}(230pt,5pt)
+      \begin{equation*}
+           a_\mu = -\int d\Gamma' v'_{\mu} G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}')
+      \end{equation*}
+   \end{textblock*}
+
    \begin{equation*}
-   \omega = \frac{1}{4}(I_0-I_2), \quad -\frac{1}{4}\left(I_0-I_2\pm \sqrt{ (I_0-2I_1+I_2)(I_0+2I_1+I_2) }\right)
+       \omega =
+               {\colorbox{red!50}{$\frac{1}{4}(I_0-I_2)$}}
+               , \qquad
+               \colorbox{blue!50}{$-\frac{1}{4}\left(I_0-I_2\pm \sqrt{ (I_0-2I_1+I_2)(I_0+2I_1+I_2) }\right)$}
    \end{equation*}
+
+
+
+
+   \begin{itemize}
+       \item \colorbox{red!50}{MAA solution}: Related to axial symmetry breaking
+       \item \colorbox{blue!50}{MZA solution}: Related to azimuthal symmetry breaking
+   \end{itemize}
+
+   % \tikzstyle{na} = [baseline=-.5ex]
+
+
+
+
+
+
+   % \begin{equation*}
+   %     \omega =
+   %     \tikz[baseline]{
+   %             \node[fill=red!50,anchor=base] (t1)
+   %             {\colorbox{red!50}{$\frac{1}{4}(I_0-I_2)$}}
+   %             }
+   %             , \qquad
+   %             \tikz[baseline]{
+   %             \node[fill=blue!50, anchor=base] (t2)
+   %             {
+   %             \colorbox{blue!50}{$-\frac{1}{4}\left(I_0-I_2\pm \sqrt{ (I_0-2I_1+I_2)(I_0+2I_1+I_2) }\right)$}
+   %             };
+   %         }
+   % \end{equation*}
+   %
+   %
+   %
+   %
+   % \begin{itemize}
+   %     \item \colorbox{blue!50}{MAA solution}
+   %         \tikz[na]\node [coordinate] (n2) {};
+   %         : Related to axial symmetry breaking
+   %     \item \colorbox{red!50}{MZA solution}: Related to azimuthal symmetry breaking
+   %         \tikz[na]\node [coordinate] (n3) {};
+   % \end{itemize}
+
+
+
+
+
+
+
+   % Now it's time to draw some edges between the global nodes. Note that we
+   % have to apply the 'overlay' style.
+   % \begin{tikzpicture}[overlay]
+   %         \path[->]<1-> (n2) edge [bend right] (t1);
+   %         \path[->]<1-> (n3) edge [bend right=20] (t2);
+   % \end{tikzpicture}
+
+
+
+
+
+
+
+\end{frame}
+
+
+\begin{frame}{Dispersion Relation and Instabilities}
+
+   \begin{tcolorbox}[standard jigsaw,opacityback=0]
+      \color{white}
+      \small
+      Izaguirre, I., Raffelt, G., \& Tamborra, I. (2017). \emph{Fast Pairwise Conversion of Supernova Neutrinos: A Dispersion Relation Approach}. Physical Review Letters, 118(2), 021101.
    \end{tcolorbox}
-}
+\vspace{-0.7em}
+   \begin{tcolorbox}
+\begin{figure}
+   \includegraphics[width=\textwidth]{assets/dr/izaguirre1.jpg}
+\end{figure}
+
+\begin{columns}[T]
+   \begin{column}{0.5\textwidth}
+      \begin{figure}
+         \includegraphics[width=\textwidth]{assets/dr/izaguirre2.jpg}
+      \end{figure}
+   \end{column}%
+   \begin{column}{0.5\textwidth}
+      \begin{figure}
+         \includegraphics[width=\textwidth]{assets/dr/izaguirre3.jpg}
+      \end{figure}
+   \end{column}
+\end{columns}
+\end{tcolorbox}
+
+
+\vspace{-0.8em}
+\begin{enumerate}
+   \item Instabilities occur in gaps.
+   \item Gaps lead to Instabilities.
+   \item Instabilities do not occur without gap.
+\end{enumerate}
 
 \end{frame}
 
-
-\begin{frame}{Dispersion Relation}
-
-    \begin{textblock*}{100pt}(230pt,5pt)
-        \begin{equation*}
-            a_\mu = -\int d\Gamma' v'_{\mu} G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}')
-        \end{equation*}
-    \end{textblock*}
-
-
-    \begin{tcolorbox}
-        \vspace{-0.8em}
-        \begin{equation*}
-       \omega =\colorbox{red!50}{$\frac{1}{4}(I_0-I_2)$}, \quad \colorbox{blue!50}{$-\frac{1}{4}\left(I_0-I_2\pm \sqrt{ (I_0-2I_1+I_2)(I_0+2I_1+I_2) }\right)$}
-        \end{equation*}
-        \end{tcolorbox}
-\begin{itemize}
-    \item \colorbox{red!50}{MAA solution}
-    \item \colorbox{blue!50}{MZA solution}
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}{Dispersion Relation}
+\begin{frame}{Dispersion Relation and Instabilities}
 
 
     \begin{textblock*}{100pt}(230pt,10pt)
@@ -2353,7 +2441,7 @@ Nontrivial solutions to EoM requires
 
 \end{frame}
 
-\begin{frame}{Dispersion Relation}
+\begin{frame}{Dispersion Relation and Instabilities}
 
 \centering
       Three zenith angles
@@ -2378,14 +2466,20 @@ Nontrivial solutions to EoM requires
 
 
 
-
+\pause
+\begin{tcolorbox}[halign=center]
+   Cubic equation of $k=\lvert \boldsymbol{k} \rvert$ $\Rightarrow$ 3 solutions of $k$ for given $\omega$
+\end{tcolorbox}
 
 
 
 \pause
    \begin{tcolorbox}
       \centering
-      Gap and instability correspondance does NOT hold in three-zenith-angle model case.
+      % \begin{itemize}
+         % \item
+         \color{black}Instabilities occur without gaps.
+      % \end{itemize}
    \end{tcolorbox}
 
 
@@ -2393,8 +2487,34 @@ Nontrivial solutions to EoM requires
 \end{frame}
 
 
+\begin{frame}{Dispersion Relations and Instabilities}
 
-\begin{frame}{Dispersion Relations}
+
+
+   \begin{figure}
+      \minipage{0.49\textwidth}
+      \includegraphics[width=\linewidth]{assets/dr/boxSpectPlt}
+      \caption*{Box spectrum: $-0.1$ for $u\in [-1,-0.3)$; $1$ for $u\in [-0.3,1]$}
+      \endminipage\hfill
+      \minipage{0.49\textwidth}
+      \includegraphics[width=\linewidth]{assets/dr/spectBoxC1MZADRPltBlob.pdf}
+      \caption*{MZA solution: no gaps yet unstable in some regions}
+      \endminipage\hfill
+    %   \caption*{Dispersion relation and linear stability analysis for box spectrum. The box spectrum is defined to be $-0.1$ within range $u\in [-1,-0.3)$ and $1$ within range $u\in [-0.3,1]$. Left panel shows the dispersion relation and the complex $k$ for real $\omega$ for MAA solution. Right panel is the corresponding result for MZA solution. Dash-dotted gray lines are $\omega= \pm k$ which sets the boundaries of the forbidden region for dispersion relation.
+    %    }
+    \pause
+    \begin{tcolorbox}
+      Instabilities also occur without gaps.
+    \end{tcolorbox}
+   \end{figure}
+
+
+
+\end{frame}
+
+
+
+\begin{frame}{Dispersion Relations and Instabilities}
 
 
        \begin{textblock*}{100pt}(230pt,10pt)
@@ -2418,82 +2538,27 @@ Garching spectrum:
     %    }
    \end{figure}
 
-
-\end{frame}
-
-\begin{frame}{Dispersion Relations}
-
-Solve $k$ for MAA solutions
-\begin{equation*}
-   1 = \frac{1}{4k} \int \mathrm du G(u) \frac{ 1 - u^2 }{ \omega/k - u }.
-\end{equation*}
-around  $\omega\to 0$.
-
-\pause
-
-Apply Stokhotski-Plemelj theorem
-\begin{align*}
-\operatorname{Re}(k) =& \frac{1}{4}\left(  \mathcal{P} \int \mathrm d u G(u) \frac{ 1 - u^2 }{ - u }  \right)\label{eqn-re-k-arbitrary-spectrum} \\
-\operatorname{Im}(k) =&  \frac{\pi}{4}G(0) \operatorname{Sign}\left( \omega \right) \operatorname{Sign}\left(  \operatorname{Im}(k)  \right).
-\end{align*}
-
-\pause
-
-\begin{itemize}
-   \item $G(0) \operatorname{Sign}(\omega) > 0$: $\lvert \operatorname{Im}(k) \rvert  =  \frac{\pi}{4}\lvert G(0)\rvert$
-   \item $G(0) \operatorname{Sign}(\omega) < 0$: $\lvert \operatorname{Im}(k) \rvert  = 0$
-\end{itemize}
-
 \pause
 \begin{tcolorbox}
-   Gap between dispersion relation and $\omega=0$
+   \begin{itemize}
+      \item
+      \color{black}MAA solutions: unstable region stops at $\omega\to 0$
+      \item
+      \color{black} MZA solutions: instabilities are different for region $\omega>0$ and $\omega<0$.
+   \end{itemize}
+\end{tcolorbox}
+\pause
+\begin{tcolorbox}
+   \color{black} Instabilities might occur in gaps of DR and $\omega=0$ if there is any.
 \end{tcolorbox}
 
-
-% \begin{frame}{Dispersion Relation}
-% For MZA solutions
-%
-%
-% \end{frame}
-
-
-% \begin{align*}
-% &\left(4\operatorname{Re}(k) - \mathcal P \int \frac{G(u)}{u} \mathrm d u + U_1 \right)^2  - \left( \operatorname{Sign}(\omega \operatorname{Im}(k) )\pi G(0) +4 \operatorname{Im}(k) \right)^2 \\
-% =& - \left( \mathcal P \int \frac{G(u)}{u} \mathrm du + U_1 \right) \pi \operatorname{Sign}(\omega \operatorname{Im}(k) ) G(0),
-% \end{align*}
-
-% \begin{equation*}
-%    \operatorname{Im}(k) = - \frac{1}{4} \pi G(0) \operatorname{Sign}(\omega \operatorname{Im}(k) ) \left(  1 \pm \frac{ \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }{ 4 \operatorname{Re}(k) - \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }  \right)
-% \end{equation*}
-
 \end{frame}
 
 
 
-\begin{frame}{Dispersion Relations}
-
- Box spectrum: $-0.1$ within range $u\in [-1,-0.3)$ and $1$ within range $u\in [-0.3,1]$
-
-   \begin{figure}
-      \minipage{0.49\textwidth}
-      \includegraphics[width=\linewidth]{assets/dr/spectBoxC1MAADRPltBlob.pdf}
-      \caption*{MAA solution}
-      \endminipage\hfill
-      \minipage{0.49\textwidth}
-      \includegraphics[width=\linewidth]{assets/dr/spectBoxC1MZADRPltBlob.pdf}
-      \caption*{MZA solution}
-      \endminipage\hfill
-    %   \caption*{Dispersion relation and linear stability analysis for box spectrum. The box spectrum is defined to be $-0.1$ within range $u\in [-1,-0.3)$ and $1$ within range $u\in [-0.3,1]$. Left panel shows the dispersion relation and the complex $k$ for real $\omega$ for MAA solution. Right panel is the corresponding result for MZA solution. Dash-dotted gray lines are $\omega= \pm k$ which sets the boundaries of the forbidden region for dispersion relation.
-    %    }
-    \pause
-    \begin{tcolorbox}
-      Instabilities occur even without dispersion relation gaps.
-    \end{tcolorbox}
-   \end{figure}
 
 
 
-\end{frame}
 
 
 \subsection{Summary of Dispersion Relation}
@@ -2501,8 +2566,8 @@ Apply Stokhotski-Plemelj theorem
 \begin{frame}{Summary of Dispersion Relation}
 
 \begin{itemize}
-   \item Neutrino oscillation instability corresponds to gaps of dispersion relations for two-zenith-angle models.
-   \item It can NOT be generalized to multiple-zenith-angle models nor continuous emission models.
+   \item Neutrino oscillation instabilities might occur in DR gaps.
+   \item Neutrino oscillation instabilities might occur even if DR has no gaps.
    \item If there exists gaps, gaps should be defined as the gap between dispersion relation and $\omega=0$ instead of the gaps between dispersion relation curves.
 \end{itemize}
 
@@ -2519,9 +2584,9 @@ Apply Stokhotski-Plemelj theorem
 
 \begin{frame}{Acknowledgement}
 
-I am very thankful to my advisor Professor Huaiyu Duan, as well as my colleagues Dr. Sajad Abbar, and Dr. Shashank Shalgar, and Joshua Martin, for all the help in both research and life.
+I am very thankful to my advisor Professor Huaiyu Duan, as well as my colleagues Dr. Sajad Abbar, Dr. Shashank Shalgar, and Joshua Martin, for all the help in both research and life.
 
-My research is supported by DOE.
+My research is supported by DOE EPSCoR grant \#DE-SC0008142 and DOE grant \#DE-SC0017803 at UNM.
 
 \end{frame}
 

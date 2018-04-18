@@ -9,103 +9,172 @@
 \end{frame}
 
 \begin{frame}{Parameters}
-
+Vacuum oscillations:
    $\sin^2\theta_v = 0.093$
-\end{frame}
 
-\begin{frame}{Hamiltonian, and Basis, and Rabi Oscillations}
-
-
-
-\begin{tcolorbox}[title=Hamiltonian in Background Matter Basis]
-    \begin{equation*}
-    \mathbf {H} = \frac{1}{2}\left( - \omega_{\mathrm{m}} + {\color{red}\delta \lambda(x)} \cos 2\theta_{\mathrm{m}} \right) \sigma_3 - \frac{  {\color{red}\delta \lambda(x)}  }{2} \sin 2\theta_{\mathrm{m}} \sigma_1.
-\end{equation*}
-\end{tcolorbox}
-
-
-Matter profile
-\begin{equation*}
-    \lambda(x) = \lambda_0 + {\color{red}A \cos (k x)},
-\end{equation*}
-
-
-\begin{equation*}
-    \mathbf {H} = \frac{1}{2}\left( - \omega_{\mathrm{m}} +  \cos 2\theta_{\mathrm{m}}{\color{red}A\cos(kx)} \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m} }  }{2}{\color{red}A \cos(kx)}  \sigma_1.
-\end{equation*}
-
-
-
-
+Bipolar model animation:
+\begin{itemize}
+   \item $\theta_v = 0$
+   \item $\alpha = 1$
+   \item $\mu = 5$
+\end{itemize}
+Initial condition
+\begin{itemize}
+   \item \begin{equation*}
+   \vec s = \begin{pmatrix}
+      10^{-3} \\
+      0 \\
+      1
+   \end{pmatrix}
+   \end{equation*}
+\end{itemize}
 
 \end{frame}
 
 
-\begin{frame}{Stimulated Neutrino Oscillations}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\only<1-1>{
-% Matter profile
-\begin{tcolorbox}[title=Matter Profile]
-\begin{equation*}
-    \lambda(x)  = \lambda_0 + {\color{red}\delta\lambda(x)}
-\end{equation*}
-\end{tcolorbox}
+\begin{frame}{Rabi Oscillations With Multiple Driving Frequencies}
 
 
-% Basis
-
-
-\begin{tcolorbox}[title=Basis]
-
-Background matter basis: Hamiltonian is diagonalized with only background matter profile $\lambda_0$,
+\only<1>{
+Consider Rabi oscillation with two driving frequencies $k_1=n_1 k$, $k_2=n_2 k$
 
 \begin{equation*}
-    \mathrm{H}_{\mathrm{background}} = -\frac{\omega_{\mathrm{m}}}{2} \boldsymbol{\sigma_3}.
+    \vec H = \begin{pmatrix}
+    0\\
+    0\\
+    \omega_m
+    \end{pmatrix} + \alpha_1\begin{pmatrix}
+     \cos(k_1x)\\
+    -\sin(k_1x)\\
+    0
+\end{pmatrix} + \colorbox{blue!50}{$\alpha_2\begin{pmatrix}
+    \cos(k_2x)\\
+    -\sin(k_2x)\\
+    0
+    \end{pmatrix}$}
 \end{equation*}
 
-\end{tcolorbox}
+Corotating frame of the second potential
 
 
-% Hamiltonian of with perturbation in matter profile, in background matter basis
-\begin{tcolorbox}[title=Hamiltonian]
 
 \begin{equation*}
-    \mathbf H = \frac{1}{2}\left( - \omega_{\mathrm{m}} + {\color{red}\delta \lambda(x)} \cos 2\theta_{\mathrm{m}} \right) \boldsymbol{\sigma_3} - \frac{{\color{red}\delta \lambda(x) } }{2} \sin \theta_{\mathrm{m}} \boldsymbol{\sigma_1}.
+    \vec H = \begin{pmatrix}
+    0\\
+    0\\
+    \omega_m - k_2
+    \end{pmatrix} + \alpha_1\begin{pmatrix}
+     \cos(k_1-k_2x)\\
+    -\sin(k_1-k_2x)\\
+    0
+\end{pmatrix} + \colorbox{blue!50}{$\alpha_2\begin{pmatrix}
+    1\\
+    0\\
+    0
+    \end{pmatrix}$}
 \end{equation*}
-
-
-\end{tcolorbox}
 
 }
 
-\only<2-2>{
+\only<1>{
+Energy gap in this frame becomes the length of the vector
 
-% \begin{tcolorbox}
-% Kneller, J. P., McLaughlin, G. C., \& Patton, K. M. (2013). J. Phys. G: Nucl. Part. Phys. {\bf{40}} (2013) 055002.
-% \end{tcolorbox}
+\begin{equation*}
+    \begin{pmatrix}
+    0\\
+    0\\
+    \omega_m - k_2
+\end{pmatrix} + \colorbox{blue!50}{$\alpha_2\begin{pmatrix}
+    1\\
+    0\\
+    0
+    \end{pmatrix}$}
+\end{equation*}
+}
 
+\only<2->{
+
+% Energy gap in this frame becomes the length of the vector
+% \begin{equation*}
+% \sqrt{(\omega_{\mathrm m} - k_2)^2 + \alpha_2^2 } \to \omega_{\mathrm m} - k_2 + \frac{1}{2}\frac{\alpha_2^2}{\omega_{\mathrm m}-k_2}
+% \end{equation*}
+
+Relative detuning
+
+\begin{equation*}
+D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{2\alpha_1(\omega_{\mathrm m}-k_2)} \right\vert
+\end{equation*}
+
+}
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}{MAA and MZA}
+
+\begin{equation*}
+   \tilde \epsilon = \frac{ v^\mu a_\mu }{ v^\alpha k_\alpha }
+\end{equation*}
+
+
+\end{frame}
+
+
+\begin{frame}{Dispersion Relations}
+
+Solve $k$ for MAA solutions
+\begin{equation*}
+   1 = \frac{1}{4k} \int \mathrm du G(u) \frac{ 1 - u^2 }{ \omega/k - u }.
+\end{equation*}
+around  $\omega\to 0$.
+
+\pause
+
+Apply Stokhotski-Plemelj theorem
+\begin{align*}
+\operatorname{Re}(k) =& \frac{1}{4}\left(  \mathcal{P} \int \mathrm d u G(u) \frac{ 1 - u^2 }{ - u }  \right)\label{eqn-re-k-arbitrary-spectrum} \\
+\operatorname{Im}(k) =&  \frac{\pi}{4}G(0) \operatorname{Sign}\left( \omega \right) \operatorname{Sign}\left(  \operatorname{Im}(k)  \right).
+\end{align*}
+
+\pause
+
+\begin{itemize}
+   \item $G(0) \operatorname{Sign}(\omega) > 0$: $\lvert \operatorname{Im}(k) \rvert  =  \frac{\pi}{4}\lvert G(0)\rvert$
+   \item $G(0) \operatorname{Sign}(\omega) < 0$: $\lvert \operatorname{Im}(k) \rvert  = 0$
+\end{itemize}
+
+\pause
 \begin{tcolorbox}
-P. Krastev and A. Smirnov (1989); J. Kneller et al (2013);\\ K. Patton et al (2014);
+   Gap between dispersion relation and $\omega=0$
 \end{tcolorbox}
 
 
-\begin{figure}
-\includegraphics[width=0.8\textwidth]{assets/stimulated-oscillation-phenomenon.png}
-%stimulated-neutrino-oscillations-kneller.png}
-\caption*{Stimulated oscillations. $\lambda(x) = \lambda_0 +  A \sin (k x)$  with $\hat x = \omega_{\mathrm m} x $, $A=0.1\omega_{\mathrm m}$, $k=0.995\omega_{\mathrm m}$, $\theta_{\mathrm{m}}=\pi/6$}
-\end{figure}
+% \begin{frame}{Dispersion Relation}
+% For MZA solutions
+%
+%
+% \end{frame}
 
 
-}
+% \begin{align*}
+% &\left(4\operatorname{Re}(k) - \mathcal P \int \frac{G(u)}{u} \mathrm d u + U_1 \right)^2  - \left( \operatorname{Sign}(\omega \operatorname{Im}(k) )\pi G(0) +4 \operatorname{Im}(k) \right)^2 \\
+% =& - \left( \mathcal P \int \frac{G(u)}{u} \mathrm du + U_1 \right) \pi \operatorname{Sign}(\omega \operatorname{Im}(k) ) G(0),
+% \end{align*}
 
-
-
-
+% \begin{equation*}
+%    \operatorname{Im}(k) = - \frac{1}{4} \pi G(0) \operatorname{Sign}(\omega \operatorname{Im}(k) ) \left(  1 \pm \frac{ \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }{ 4 \operatorname{Re}(k) - \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }  \right)
+% \end{equation*}
 
 \end{frame}
-
-
 
 
 
