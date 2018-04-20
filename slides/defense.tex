@@ -1181,9 +1181,9 @@ We have been making approximations.
 \begin{align*}
     \mathbf {H} =\,& \frac{1}{2}\left( - \omega_{\mathrm{m}}
     +\cancel{
-     \cos 2\theta_{\mathrm{m}}{\color{red}A\cos(kx)} } \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m}
+     \cos 2\theta_{\mathrm{m}}{A\cos(kx)} } \right) \sigma_3 - \frac{  \sin 2\theta_{\mathrm{m}
     }
-    }{2}{\color{red}A \cos(kx)}  \sigma_1 \\
+    }{2}{A \cos(kx)}  \sigma_1 \\
     \to\, &  \omega_{\mathrm m}\begin{pmatrix}
     0\\
     0\\
@@ -1518,8 +1518,12 @@ where
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{assets/castlewall-profile}
-    \caption*{Castle wall matter profile: $\Lambda_2 =0.35\omega_{\mathrm v} \cos 2\theta_{\mathrm v} $,  $\Lambda_1 = 0.15\omega_{\mathrm v} \cos 2\theta_{\mathrm v}$ and period $X =2\pi/\omega_{\mathrm m}$ }
+    \caption*{Castle wall matter profile: \\ $\Lambda_2 =0.7\omega_{\mathrm v} \cos 2\theta_{\mathrm v} $ \\  $\Lambda_1 = 0.3\omega_{\mathrm v} \cos 2\theta_{\mathrm v}$\\ period $X =2\pi/\omega_{\mathrm m}$  }
 \end{figure}
+
+\begin{tcolorbox}[coltext=white, standard jigsaw, opacityback=0]
+   Density is smaller than MSW density requirement.
+\end{tcolorbox}
 
 }
 
@@ -1567,7 +1571,8 @@ where
 
 \only<3>{
 \begin{figure}
-        \includegraphics[width=\columnwidth]{assets/castle-wall-1}%
+        % \includegraphics[width=\columnwidth]{assets/castle-wall-1}%
+        \includegraphics[width=\columnwidth]{assets/castle-wall-with-legend}%
      \caption*{Transition probability is a Rabi resonance with small variations due to higher orders.}
 \end{figure}
 }
@@ -1926,6 +1931,15 @@ Suppose we have neutrino flux $10^{50}\mathrm{ergs\cdot s^{-1}}$. We estimate th
       \includegraphics[width=\textwidth]{assets/two-beams-model-sym}
       \caption*{$\rho_1$: neutrinos; $\rho_2$: antineutrinos}
    \end{figure}
+
+   \begin{equation*}
+   \theta_1 =  2\pi/3, \theta_2 = \pi/6
+   \end{equation*}
+
+   \begin{align*}
+      H_{\nu\nu} = \frac{1}{2}\left( \mu_1 \rho_1 - \mu_2 \rho_2 \right)
+   \end{align*}
+
    \end{column}%
 \begin{column}{0.45\textwidth}
 
@@ -1933,9 +1947,7 @@ Suppose we have neutrino flux $10^{50}\mathrm{ergs\cdot s^{-1}}$. We estimate th
    i \partial_z \rho_i = \left[ H_i, \rho_i \right]
    \end{equation*}
 
-   \begin{equation*}
-   \theta_1 =  2\pi/3, \theta_2 = \pi/6
-   \end{equation*}
+
 
 \pause
 
@@ -2365,17 +2377,29 @@ Nontrivial solutions to EoM requires
 
 
     \begin{textblock*}{100pt}(230pt,10pt)
-        Izaguirre et al, 2017
+      % \begin{tcolorbox}
+         Izaguirre et al, 2017
+      % \end{tcolorbox}
     \end{textblock*}
 
-\begin{figure}
-    \begin{tcolorbox}
-        \color{white}
-    \centering
-    \includegraphics[width=0.8\textwidth]{assets/dr/dr-two-beams.png}
-    \end{tcolorbox}
+    \begin{figure}
+        % \begin{tcolorbox}
+            % \color{white}
+        % \centering
+        \includegraphics[width=\textwidth]{assets/dr/two-zenith-angles-with-configuration}
+        % \end{tcolorbox}
+        \caption*{Two zenith angles}
+    \end{figure}
 
-\end{figure}
+
+% \begin{figure}
+%     \begin{tcolorbox}
+%         \color{white}
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{assets/dr/dr-two-beams.png}
+%     \end{tcolorbox}
+%
+% \end{figure}
 
 %    \begin{columns}[T]
 
@@ -2395,10 +2419,10 @@ Nontrivial solutions to EoM requires
 
 %    \end{columns}
 
-\begin{tcolorbox}
-   \centering
-   Two zenith angles
-\end{tcolorbox}
+% \begin{tcolorbox}
+%    \centering
+%    Two zenith angles
+% \end{tcolorbox}
 
 \end{frame}
 
