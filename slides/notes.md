@@ -14,11 +14,11 @@ The complexity of the problem is that the states of background neutrinos will al
 
 4. P30
 
-Before we move on to a specific problem. We can qualitatively determining whether neutrino selfinteractions can lead to different oscillations, apart from the fact that it's not linear anymore.
+Before we move on to a specific problem. We can qualitatively determine whether neutrino selfinteractions can lead to different oscillations. Apart from the fact that it's nonlinear, we can estimate the energy scales of the problem which corresponds to the scale of the flavor change.
 
 We have the vacuum oscillations frequency, and a neutrino self interaction potential.
 
-The vacuum oscillation frequency can be estimated to be
+The vacuum oscillation frequency can be estimated. It corresponds to oscillations on the scale of kms or tens of kms for 1MeV neutrinos.
 
 
 2. P31

@@ -111,14 +111,14 @@ Suppose we have neutrino flux $10^{50}\mathrm{ergs\cdot s^{-1}}$. We estimate th
 $H_{\mathrm v,1} = - \frac{1}{2}\omega_{\mathrm v} \sigma_3 $\\
 $H_{\mathrm v,2} =  \frac{1}{2}\omega_{\mathrm v} \sigma_3 $\\
    % \item $H_m = \frac{1}{2}\lambda \sigma_3$
-$H_{\nu\nu} = \frac{1}{2} (\mu_1\rho_1- \mu_2\rho_2)$
+$H_{\nu\nu} = \frac{1}{2} (\mu\rho_1- \mu\rho_2)$
    % \item $H_{\nu\nu} = -\frac{1}{2}\mu_2 \rho_2$
 % \end{tcolorbox}
 
 
 where
 \begin{equation*}
-   \mu_{1(2)} = \sqrt{2} G_{\mathrm F} \xi n_{1(2)}
+   \mu = \sqrt{2} G_{\mathrm F} \xi n
 \end{equation*}
 
 Geometric factor
@@ -196,7 +196,7 @@ Geometric factor
 
 \begin{textblock*}{100pt}(250pt,10pt)
 Inverted hierarchy;
-$\mu = 5\omega_{\mathrm v}$
+$\mu = 5\lvert\omega_{\mathrm v}\rvert$
 \end{textblock*}
 
 % \begin{tcolorbox}
@@ -274,10 +274,10 @@ $\mu = 5\omega_{\mathrm v}$
    \begin{column}{0.45\textwidth}
 
    \begin{equation*}
-   \theta_1 =  2\pi/3, \theta_2 = \pi/6
+   \theta_1 =  5\pi/6, \theta_2 = \pi/6
    \end{equation*}
    \begin{align*}
-      H_{\nu\nu} = \frac{1}{2}\left( \mu_1 \rho_1 - \mu_2 \rho_2 \right)
+      H_{\nu\nu} = \frac{1}{2}\left( \mu \rho_1 - \mu \rho_2 \right)
    \end{align*}
    \begin{equation*}
    i \partial_z \rho_i = \left[ H_i, \rho_i \right]
@@ -425,7 +425,7 @@ Equation of motion for off-diagonal element of density matrix (Izaguirre et al, 
     \item \colorbox{blue!50}{$ v^\mu$}:  four-velocity of neutrinos $(1, \boldsymbol v) $
     \item \colorbox{red!50}{$\Lambda$}: matter contribution $( \sqrt{2}G_{\mathrm F} n_{\mathrm e}, \sqrt{2}G_F n_e \boldsymbol v_{\mathrm e} )$
     \item \colorbox{ao!60}{$\Phi$}: neutrino flux $( \sqrt{2}G_{\mathrm F} n_{\nu}, \sqrt{2}G_F n_\nu \boldsymbol v )$
-    \item \colorbox{armygreen!70}{$G(\boldsymbol{v}')$}: electron lepton number of neutrinos $\sqrt{2}G_{\mathrm F} \int_0^\infty \frac{E^2 dE}{2\pi^2} \left( n_{\nu_{\mathrm e}} - n_{\bar\nu_{\mathrm e}} \right)$
+    \item \colorbox{armygreen!70}{$G(\boldsymbol{v}')$}: electron lepton number $\sqrt{2}G_{\mathrm F} \int_0^\infty \frac{E^2 dE}{2\pi^2} \left( n_{\nu_{\mathrm e}} - n_{\bar\nu_{\mathrm e}} \right)$
 \end{itemize}
 
 
@@ -460,6 +460,7 @@ Collective mode
 \begin{equation*}
     v^\mu (K_\mu -( \Lambda + \Phi )_\mu ) \tilde\epsilon (\boldsymbol{v} ) = - \int d\Gamma' v^\mu v'_\mu G(\boldsymbol{v}') \tilde \epsilon (\boldsymbol{v}')
 \end{equation*}
+with $K_\mu \to ( \Omega, \boldsymbol{K} )$
 }
 
 \only<4>{
@@ -553,7 +554,7 @@ Axially symmetric: $v^\alpha k_\alpha = \omega (1 - n \cos \theta)$ where $n = \
 
 \begin{columns}[T]
     \begin{column}{0.5\textwidth}
-Nontrivial solutions to EoM requires
+Condition for nontrivial solutions of $a_\mu$,
 \only<1>{
 \begin{equation*}
     v^\mu \left( \omega \delta^\nu_{\phantom{\nu}\mu} + N^\nu_{\phantom{\nu}\mu} \right) a_\nu =0
@@ -649,8 +650,8 @@ Nontrivial solutions to EoM requires
 
 
    \begin{itemize}
-       \item \colorbox{red!50}{MAA solution}: Related to axial symmetry breaking
-       \item \colorbox{blue!50}{MZA solution}: Related to azimuthal symmetry breaking
+       \item \colorbox{red!50}{MAA solution}: Related to flavor evolution due to multiple azimuthal angles
+       \item \colorbox{blue!50}{MZA solution}: Related to flavor evolution due to multiple zenith angles
    \end{itemize}
 
    % \tikzstyle{na} = [baseline=-.5ex]
@@ -712,7 +713,7 @@ Nontrivial solutions to EoM requires
 
     \begin{textblock*}{100pt}(230pt,10pt)
       % \begin{tcolorbox}
-         Izaguirre et al, 2017
+         Modified version of Fig. 1 in Izaguirre et al, 2017;
       % \end{tcolorbox}
     \end{textblock*}
 
