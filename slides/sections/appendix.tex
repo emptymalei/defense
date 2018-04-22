@@ -113,6 +113,43 @@ D' =  \left\vert \frac{\omega_{\mathrm m} - k_1 }{\alpha_1} + \frac{\alpha_2^2}{
 
 \end{frame}
 
+\begin{frame}{Multiple Frequencies in Matter Potential}
+
+
+
+
+\begin{equation*}
+\lambda(x) = \lambda_0 + \sum_{a=1}^N A_a \sin(k_a x )
+\end{equation*}
+
+
+\begin{tcolorbox}[title=Hamiltonian in Rabi Basis]
+
+
+\begin{equation*}
+\mathbf{\widetilde H}= -\frac{\omega_{\mathrm m}}{2}\sigma_3 + \frac{1}{2} \sum_{n_1=-\infty}^\infty \cdots \sum_{n_N=-\infty}^\infty \begin{pmatrix}
+0 &  B_{\{n_a\}} e^{i  {\color{red} \sum_a n_a k_a } x}\\
+  B_{\{n_a\}}^* e^{ -i  {\color{red} \sum_a n_a k_a } x} & 0
+\end{pmatrix}
+\end{equation*}
+
+
+where
+\begin{align*}
+    B_{\{n_a\}} &= -(-i)^{\sum_a n_a} \tan 2\theta_m \left( {\color{red}\sum_a n_a k_a} \right) \left( \prod_a J_{n_a}\left( \frac{A_a}{k_a}\cos 2\theta_m \right) \right)
+    %\Phi_{\{n_a\}} &= e^{i\left( \sum_a n_a \phi_a \right)}.
+\end{align*}
+
+
+
+
+\end{tcolorbox}
+
+
+
+
+\end{frame}
+
 
 
 
