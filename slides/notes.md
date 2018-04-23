@@ -1,3 +1,12 @@
+## Intro
+
+Thank you everyone for coming to my defense talk, especially my committee, Prof. Allahverdi, Prof. Finley, Prof. Loomba, Prof. Qian from University of Minnesota, and my advisor Prof. Duan.
+
+I will talk about two topics, neutrino oscillations in 
+
+
+
+
 ## Collective Oscillations
 
 1. P29:
