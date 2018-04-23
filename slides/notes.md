@@ -1,8 +1,34 @@
 ## Intro
 
-Thank you everyone for coming to my defense talk, especially my committee, Prof. Allahverdi, Prof. Finley, Prof. Loomba, Prof. Qian from University of Minnesota, and my advisor Prof. Duan.
+Thank you everyone for coming to my defense talk, especially everyone on my committee, Prof. Allahverdi, Prof. Finley, Prof. Loomba, Prof. Qian from University of Minnesota, and my advisor Prof. Duan.
 
-I will talk about two topics, neutrino oscillations in 
+There will be three sections in my talk. The first section is a breif introduction of neutrino oscillations. Then I will talk about neutrino oscillations in matter as well as collective neutrino oscillations.
+
+
+
+## Neutrino Oscillations
+
+1. P2
+
+
+The mass differences are very different which corresponds to different oscillation scales. We can focus on two flavor senario.
+
+2. P3
+
+3. P12
+
+There is a famous effect called MSW effect. For electron neutrinos produced in a stellar core, they will experience a huge potential due to the dense matter. The total Hamiltonian is almost poiting downward. Electron neutrinos barely precess and no neutrino flavor conversion is possible. However neutrinos propagate through out will experience lower matter density and the density change is not too dramatic. In this case the flavor isospin will follow the change of Hamiltonian. We can see some flavor change. As the neutrinos reach the surface, the Hamiltonian becomes Vacuum Hamiltonian and electron flavor neutrinos are partially converted.
+
+4. P14
+
+Here is a simple example why it is important.
+
+Suppose we have a constant matter density, and neutrinos are starting from one of the mass states. Since the Hamiltonian is diagonalized in mass basis, there will be no transition to the other mass state.
+
+However, if we add a periodic component to it. 
+
+
+
 
 
 
